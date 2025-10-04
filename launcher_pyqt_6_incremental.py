@@ -166,19 +166,32 @@ class LauncherApp(QWidget):
         layout.setContentsMargins(8, 8, 8, 8)
 
         # ---- Status superior ----
-        self.label_status = QLabel("Verificando atualizações...")
+        self.label_status = QLabel("Pronto")
         self.label_status.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.label_status.setStyleSheet("font-family: Calibri; color: white; font-size: 16px; font-weight: 500;")
-        self.label_status.setVisible(False)
 
+        # ---- Barra de progresso sempre visível ----
         self.progress = QProgressBar()
-        self.progress.setVisible(False)
+        self.progress.setRange(0, 100)
+        self.progress.setValue(0)
+        self.progress.setStyleSheet("""
+            QProgressBar {
+                border: 2px solid #555;
+                border-radius: 5px;
+                text-align: center;
+                color: white;
+            }
+            QProgressBar::chunk {
+                background-color: #0078d7;
+            }
+        """)
+        layout.addWidget(self.progress)
 
         # ---- Barra superior personalizada (minimizar e fechar) ----
         upper_bar = QHBoxLayout()
         upper_bar.setContentsMargins(12, 0, 0, 0)
 
-        # Adiciona o título
+        # ---- Adiciona o título ----
         title = QLabel("Launcher Conversor Thomson Reuters")
         title.setStyleSheet("font-family: Calibri; color: white; font-size: 18px;")
         title.setAlignment(Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignCenter)  # Alinha à esquerda e verticalmente central
@@ -258,7 +271,7 @@ class LauncherApp(QWidget):
             QWidget#main_widget {
                 background-color: qlineargradient(
                     x1:0, y1:0, x2:1, y2:1,
-                    stop:0 #20170f, stop:1 #271b11
+                    stop:0 #030100, stop:1 #d96e16
                 );
                 border-radius: 12px;
             }
@@ -300,9 +313,7 @@ class LauncherApp(QWidget):
         self.opacity_anim.setEasingCurve(QEasingCurve.Type.InOutCubic)
         self.opacity_anim.start()
 
-    # =====================
-    # INTERAÇÃO DA JANELA
-    # =====================
+    # ---- Permite janela ser movida pelo mouse ----
     def mousePressEvent(self, event):  # type: ignore
         if event.button() == Qt.MouseButton.LeftButton:
             self._mouse_drag_pos = event.globalPosition().toPoint() - self.frameGeometry().topLeft()
@@ -316,9 +327,7 @@ class LauncherApp(QWidget):
     def mouseReleaseEvent(self, event):  # type: ignore
         self._mouse_drag_pos = None
 
-    # =====================
-    # ANIMAÇÃO DE FECHAR
-    # =====================
+    # ---- Abrir e fechar ----
     def fade_and_close(self):
         self.fade_out = QPropertyAnimation(self, b"windowOpacity")
         self.fade_out.setDuration(500)
@@ -328,9 +337,7 @@ class LauncherApp(QWidget):
         self.fade_out.finished.connect(self.close)
         self.fade_out.start()
 
-    # =====================
-    # LÓGICA DE ATUALIZAÇÃO
-    # =====================
+    # ---- Lógica de atualizacao ----
     def read_local_version(self) -> Optional[str]:
         try:
             if os.path.exists("app/version.txt"):
@@ -352,6 +359,7 @@ class LauncherApp(QWidget):
             self.latest_version = version
             self.label_status.setVisible(True)
             self.label_status.setText(f"Aplicativo atualizado! Versão {version}")
+            self.progress.setValue(100)
             # Ativa o botão de abrir
             self.button_open.setEnabled(True)
             self.button_open.setStyleSheet("""
