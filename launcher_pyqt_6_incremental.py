@@ -271,7 +271,7 @@ class LauncherApp(QWidget):
             QWidget#main_widget {
                 background-color: qlineargradient(
                     x1:0, y1:0, x2:1, y2:1,
-                    stop:0 #030100, stop:1 #d96e16
+                    stop:0 #030100, stop:1 #3d220c
                 );
                 border-radius: 12px;
             }
