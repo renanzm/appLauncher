@@ -35,7 +35,8 @@ class LauncherApp(LauncherUI):
             remote_ver = data.get("version")
             url = data.get("download_url")
 
-            if self.local_version == remote_ver:
+            local_ver = self.read_local_version()
+            if local_ver == remote_ver:
                 self.label_status.setText(f"Aplicativo já está atualizado! Versão {remote_ver}")
                 self.progress.setValue(100)
                 self.set_open_button_active(True)
