@@ -31,8 +31,7 @@ from PyQt6.QtGui import QColor
 from PyQt6.QtCore import Qt, QThread, pyqtSignal, QPropertyAnimation, QEasingCurve
 
 # ---------------- CONFIGURAÇÃO ----------------
-SERVER_VERSION_URL = "https://meuservidor.com/version.json"
-SERVER_LOGIN_URL = "https://meuservidor.com/api/login"
+SERVER_VERSION_URL = "http://localhost:8000/version.json"
 LOCAL_APP_FOLDER = Path("app")
 LOCAL_VERSION_FILE = LOCAL_APP_FOLDER / "version.txt"
 ASSETS_FOLDER = Path("assets")
@@ -250,13 +249,13 @@ class LauncherApp(QWidget):
         self.button_open.clicked.connect(self.open_app_or_prompt_login)
         self.button_open.setEnabled(False)  # começa desativado
         self.button_open.setStyleSheet("""
-            QPushButton {
-                font-family: Calibri;
-                background-color: #555555;
-                color: #dddddd;
-                font-size: 18px;
-            }
-        """)
+                QPushButton {
+                    font-family: Calibri;
+                    background-color: #756658;
+                    color: white;
+                    font-size: 18px;
+                }
+            """)
 
         layout.addLayout(upper_bar)
         layout.addStretch()
@@ -348,11 +347,75 @@ class LauncherApp(QWidget):
         return None
 
     def check_updates(self):
-        self.label_status.setVisible(True)
-        self.label_status.setText("Verificando atualizações...")
-        self.label_status.setStyleSheet("font-family: Calibri; font-size: 16px; color: white;")
-        # Simula um resultado bem-sucedido
-        self.on_update_checked(True, "v1.2.0")
+        try:
+            self.label_status.setText("Verificando atualizações...")
+            self.progress.setValue(0)
+            QApplication.processEvents()
+
+            # Obtém informações da versão remota
+            response = requests.get(SERVER_VERSION_URL, timeout=(5, 120))
+            if response.status_code != 200:
+                raise Exception(f"Erro HTTP {response.status_code}")
+            data = response.json()
+
+            remote_version = data.get("version")
+            download_url = data.get("download_url")
+
+            if not remote_version or not download_url:
+                raise Exception("version.json inválido ou incompleto.")
+
+            # Verifica a versão local
+            local_version = self.read_local_version()
+            if local_version == remote_version:
+                self.label_status.setText(f"Aplicativo já está atualizado! Versão {remote_version}")
+                self.progress.setValue(100)
+                self.button_open.setEnabled(True)
+                self.button_open.setStyleSheet("""
+                QPushButton {
+                    font-family: Calibri;
+                    background-color: #eb8125;
+                    color: white;
+                    font-size: 18px;
+                }
+                QPushButton:hover {
+                background-color: #f28e3c;
+                }
+                """)
+                return
+
+            # Há nova versão → baixar
+            self.label_status.setText(f"Baixando nova versão {remote_version}...")
+            self.download_thread = DownloadThread(download_url)
+            self.download_thread.progress.connect(self.progress.setValue)
+            self.download_thread.done.connect(lambda ok, msg: self.on_download_done(ok, msg, remote_version))
+            self.download_thread.start()
+
+        except Exception as e:
+            self.label_status.setText("Erro ao verificar atualização.")
+            QMessageBox.warning(self, "Erro", str(e))
+
+    def on_download_done(self, ok, msg, new_version):
+        if ok:
+            self.label_status.setText("Atualização concluída com sucesso!")
+            self.progress.setValue(100)
+            self.button_open.setEnabled(True)
+            self.button_open.setStyleSheet("""
+            QPushButton {
+                font-family: Calibri;
+                background-color: #eb8125;
+                color: white;
+                font-size: 18px;
+            }
+            QPushButton:hover {
+            background-color: #f28e3c;
+            }
+            """)
+            # Salva nova versão
+            with open("app/version.txt", "w", encoding="utf-8") as f:
+                f.write(new_version)
+            QMessageBox.information(self, "Sucesso", f"Aplicativo atualizado para {new_version}!\n{msg}")
+        else:
+            QMessageBox.warning(self, "Falha", msg)
 
     def on_update_checked(self, ok, version):
         if ok:
@@ -363,13 +426,15 @@ class LauncherApp(QWidget):
             # Ativa o botão de abrir
             self.button_open.setEnabled(True)
             self.button_open.setStyleSheet("""
-                QPushButton {
-                    font-family: Calibri;
-                    background-color: #eb8125;
-                    color: white;
-                    font-size: 18px;
-                }
-                QPushButton:hover { background-color: #f28e3c; }
+            QPushButton {
+                font-family: Calibri;
+                background-color: #eb8125;
+                color: white;
+                font-size: 18px;
+            }
+            QPushButton:hover {
+            background-color: #f28e3c;
+            }
             """)
         else:
             self.label_status.setText("Erro ao verificar atualização.")
