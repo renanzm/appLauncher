@@ -90,7 +90,7 @@ class LauncherApp(LauncherUI):
             return
 
         try:
-            subprocess.Popen([str(app_path)], cwd=LOCAL_APP_FOLDER)
+            subprocess.Popen([str(app_path), "--auth", "THOMSON_KEY_2025"], cwd=LOCAL_APP_FOLDER)
             self.close()
         except Exception as e:
             QMessageBox.warning(self, "Erro", f"Não foi possível iniciar o aplicativo:\n{e}")
