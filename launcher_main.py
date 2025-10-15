@@ -14,6 +14,7 @@ LOCAL_APP_FOLDER = BASE_DIR / "app"
 LOCAL_VERSION_FILE = LOCAL_APP_FOLDER / "version.txt"
 SERVER_VERSION_URL = "http://localhost:8000/version.json"
 
+
 class LauncherApp(LauncherUI):
     def __init__(self):
         super().__init__()
@@ -21,6 +22,7 @@ class LauncherApp(LauncherUI):
         self.btn_min.clicked.connect(self.showMinimized)
         self.button_update.clicked.connect(self.check_updates)
         self.button_open.clicked.connect(self.open_app)
+        self.button_preset.clicked.connect(self.open_preset)
         self.local_version = self.read_local_version()
         self.set_open_button_active(False)
 
@@ -94,6 +96,19 @@ class LauncherApp(LauncherUI):
             self.close()
         except Exception as e:
             QMessageBox.warning(self, "Erro", f"Não foi possível iniciar o aplicativo:\n{e}")
+
+    def open_preset(self):
+        app_path = LOCAL_APP_FOLDER / "preset_medias.exe"
+
+        if not app_path.exists():
+            QMessageBox.warning(self, "Erro", f"Arquivo não encontrado: {app_path}")
+            return
+
+        try:
+            subprocess.Popen([str(app_path), "--auth", "THOMSON_KEY_2025"], cwd=LOCAL_APP_FOLDER)
+            self.close()
+        except Exception as e:
+            QMessageBox.warning(self, "Erro", f"Não foi possível iniciar o preset:\n{e}")
 
 
 if __name__ == "__main__":

@@ -2,8 +2,8 @@ from PyQt6.QtWidgets import (
     QWidget, QVBoxLayout, QLabel, QPushButton, QProgressBar,
     QHBoxLayout, QGraphicsDropShadowEffect
 )
-from PyQt6.QtGui import QColor, QPixmap
-from PyQt6.QtCore import Qt, QPropertyAnimation, QEasingCurve, QVariantAnimation
+from PyQt6.QtGui import QColor
+from PyQt6.QtCore import Qt, QPropertyAnimation, QEasingCurve
 
 
 class LauncherUI(QWidget):
@@ -115,6 +115,10 @@ class LauncherUI(QWidget):
         self.button_open.setEnabled(False)
         self.button_open.setStyleSheet(self.button_open_inactive)
 
+        self.button_preset = QPushButton("Abrir Preset de Médias")
+        self.button_preset.setEnabled(False)
+        self.button_preset.setStyleSheet(self.button_open_inactive)
+
         # ---- Layout principal ----
         layout.addLayout(upper_bar)
         layout.addStretch()
@@ -123,6 +127,7 @@ class LauncherUI(QWidget):
         layout.addStretch()
         layout.addWidget(self.button_update)
         layout.addWidget(self.button_open)
+        layout.addWidget(self.button_preset)
 
         # ---- Estilo geral ----
         self.setStyleSheet("""
@@ -182,10 +187,13 @@ class LauncherUI(QWidget):
         self._mouse_drag_pos = None
 
     def set_open_button_active(self, active: bool):
-        """Ativa ou desativa visualmente o botão 'Abrir Aplicativo'."""
         if active:
             self.button_open.setEnabled(True)
             self.button_open.setStyleSheet(self.button_open_active)
+            self.button_preset.setEnabled(True)
+            self.button_preset.setStyleSheet(self.button_open_active)
         else:
             self.button_open.setEnabled(False)
             self.button_open.setStyleSheet(self.button_open_inactive)
+            self.button_preset.setEnabled(False)
+            self.button_preset.setStyleSheet(self.button_open_inactive)
