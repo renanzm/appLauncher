@@ -1,0 +1,6 @@
+GPSEVENT
+Código do Evento,23,3
+Descrição do Evento,27,30
+Fator de Acréscimo,64,6
+Rotina do Recibo,74,2
+Ficha Financeira,88,3

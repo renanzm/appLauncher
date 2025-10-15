@@ -1,0 +1,11 @@
+col_codigo,1,4,integer,0
+ffo_tr,5,1,char,0
+ffo_data_ini_aquis,16,8,char,0
+ffo_data_fin_aquis,24,8,char,0
+ffo_data_ini_ferias,48,8,char,0
+ffo_data_fin_ferias,56,8,char,0
+ffo_data_pagamento,72,8,char,0
+ffo_dias_ferias_aqui,80,4,real,2
+ffo_dias_abono,88,4,real,2
+ffo_dias_faltados,92,4,real,2
+ffo_data_limite_conc,128,8,char,0

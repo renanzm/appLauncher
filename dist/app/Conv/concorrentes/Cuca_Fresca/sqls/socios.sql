@@ -1,0 +1,22 @@
+SELECT codigoempresa,
+       cnpjoucpf,
+       nome,
+       codigomunicipioibge,
+       sexo,
+       grauinstrucao,
+       nacionalidade,
+       estadocivil,
+       nomemae,
+       nomepai,
+       fone,
+       identidade,
+       ctps,
+       emissor,
+       endereco,
+       cep,
+       bairro,
+       datanascimento,
+       email,
+       termino
+FROM dpcuca.socios
+ORDER BY 1, 2

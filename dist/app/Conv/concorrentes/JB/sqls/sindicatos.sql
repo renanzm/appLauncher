@@ -1,0 +1,3 @@
+SELECT *
+FROM SINDICATOS
+order by 1,2

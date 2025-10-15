@@ -1,0 +1,4 @@
+emp_codigo,1,4,integer,0
+emp_estabelecimento,5,4,integer,0
+col_codigo,9,6,integer,0
+matricula,21,8,double,0

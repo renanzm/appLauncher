@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Manual Conversores Novo Modelo</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../../css/w3.css">
+		<style>
+			body,h1,h2,h3,h4,h5 {font-family: "Verdana", sans-serif}
+			.w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
+			.w3-third img:hover{opacity: 1}
+		</style>
+		<style>
+			ol > li {
+			counter-increment: item;
+			}
+			ol > li:first-child {
+			counter-reset: item;
+			}
+			ol ol > li {
+			display: block;
+			}
+			ol ol > li:before {
+			content: counters(item, ".") ". ";
+			margin-left: -20px;
+			}
+		</style>
+	</head>
+	<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:50px">
+  <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+	<div class="w3-content" style="max-width:100%">
+		<h2 class="w3-center" id="INTRO"><b>EBS-Cordilheira/IOB/SAGE/AO3</b></h2>
+		<br>
+		<h4><b>Base de dados concorrente</b></h4>
+			<p>O backup do concorrente deve estar no formato ".BAK" (SQL Server) ou “.SQL” (MySQL). Solicitar ao cliente um backup realizado no sistema EBS Cordilheira.<br></p>
+			<p>Para a versão do EBS MySql também é possível realizar o processo de conversão usando a pasta "EBS_Cordilheira" localizada na pasta Data do MySql<br></p>
+		<h4><b>Programas necessários</b></h4>
+			<li>Microsoft Excel, versão 97/2003 ou superior</li>
+			<li>Acesso à Internet</li>
+			<li>MySQL Community 5.7</li>
+			<li>Microsoft SQL Server 2019 + SQL Management Studio
+			<p>Com exceção do Microsoft Excel, todos os demais programas podem ser baixados no FTP:<br>/unidades/Pub/Conversores/[Conversor Thomson Reuters]/[Instaladores]</p>
+		<h4><b>Treinamento</b></h4>
+			<p>O treinamento está disponível no FTP (por enquanto, apenas o treinamento para SQL Server):<br>/unidades/Pub/Conversores/[Conversor Thomson Reuters]/[ Treinamentos ]</p>
+		<br>		
+		<div class="w3-panel w3-pale-red w3-border">
+				<span>&#9888; <b>Valores de Média:</b> Caso haja no concorrente, alteração salarial retroativa os valores considerados para médias poderão ser diferentes dos apresentados na ficha financeira.
+								 Essa situação ocorre porque o EBS apresenta na ficha financeira o valor calculado antes do ajuste salarial, mas considera o valor corrigido para as médias.</span>
+		</div>
+		<br>
+		<h4><b>Conversão de base tipo SQL Server</b></h4>
+			<ol>
+				<li>Abrir o "Microsoft SQL Server Management Studio 18", instalado na máquina;</li>
+				<li>Ao abrir o Management Studio, avaliar o campo "Nome do servidor" (geralmente é o nome da máquina), e copiar esse nome para uso posterior;</li>
+					<div><img src="..\..\images\2_conversores\sqlserver_server_name.png" class="w3-border w3-padding"></div>
+				<br>
+				<li>Clicar no botão "Conectar";</li>
+				<li>Acessar a pasta " Dados_Concorrente" na raiz do conversor;</li>
+				<li>Colar o arquivo de backup do EBS nessa pasta (arquivo ".BAK");</li>
+				<li>Executar o arquivo "Conversao.bat" na pasta raiz;</li>
+				<ol>
+					<li>Informe um número para controle do atendimento;</li>
+				</ol>
+				<li>Na lista de conversores, informe a opção “EBS”, e pressione “Enter”;</li>
+				<li>Informe a opção “1 - Gerar planilha de empresas”;</li>
+				<li>Informe a opção “S” para exportar os dados (caso já tenha exportado, selecione “N”);</li>
+				<li>Informe “2” para base “SQL Server”;</li>
+				<li>Informe o nome do servidor, conforme o item “2”;</li>
+				<li>Informe “S” caso deseje converter dados da Contabilidade (Contas e Históricos);</li>
+				<li>Informe “S” caso deseje converter dados da Escrita (Clientes e Fornecedores);</li>
+				<li>Informe “S” caso deseje restaurar o backup automaticamente;</li>
+				<li>Aguarde até finalizar o processo e demonstrar a mensagem “O banco de dados EBS_Cordilheira foi restaurado com sucesso.”</li>
+				<div class="w3-panel w3-pale-red w3-border">
+				<span>&#9888; <b>IMPORTANTE:</b> Caso seja demonstrada uma mensagem diferente da citada no item 15, proceder com o registro de uma SS disponibilizando a base SQL Server e imagem da mensagem demonstrada.</span>
+				</div>
+				<li>Tecle “Enter” para continuar o processo;</li>
+				<li>Siga as instruções até que o processo seja finalizado;</li>
+				<li>Após isso, avaliar a seção “Verificador” deste manual.</li>
+				<div class="w3-panel w3-pale-red w3-border">
+				<span>&#9888; <b>MUITO IMPORTANTE:</b> As etapas para importação dos dados deste conversor mudaram, portanto, é de extrema importância que seja avaliado o tópico "IMPORTAÇÃO" no menu esquerdo deste manual.</span>
+				</div>
+			</ol>
+			<br>
+		<h4><b>Exclusão da base no SQL Server Management</b></h4>
+			<p>Após a conversão definitiva (entrega do banco ao cliente), você pode excluir a base no SQL Server Management para liberar espaço em sua máquina, seguindo os passos abaixo:</p>
+			<ol>
+				<li>Abrir o programa SQL Server Management;</li>
+				<li>Clicar no botão "Conectar";</li>
+				<li>Clicar com o botão direito do mouse na database desejada e selecionar “Excluir”;</li>
+				<li>Marcar as duas caixas de seleção conforme imagem abaixo;</li>
+				<li>Clicar no botão OK.</li>
+			</ol>
+			<div><img src="..\..\images\2_conversores\ebs_sqlserver_delete_database.png" class="w3-border w3-padding"></div>
+<br><br><br>
+		<h4><b>Conversão de base tipo MySQL</b></h4>
+		<h5><b>Arquivo .SQL</b></h5>
+			<ol>
+				<li>Acessar a pasta " Dados_Concorrente" na raiz do conversor;</li>
+				<li>Colar o arquivo de backup do EBS nessa pasta (arquivo “.SQL”);</li>
+				<li>Executar o arquivo "Conversao.bat" na pasta raiz;</li>
+				<ol>
+					<li>Informe um número para controle do atendimento;</li>
+				</ol>
+				<li>Na lista de conversores, informe a opção “EBS”, e pressione “Enter”;</li>
+				<li>Informe a opção “1 - Gerar planilha de empresas”;</li>
+				<li>Informe a opção “S” para exportar os dados (caso já tenha exportado, selecione “N”);</li>
+				<li>Informe “1” para base MySQL;</li>
+				<li>Informe a senha do MySQL para criar o banco de dados. A senha foi informada na tela de instalação do MySQL (por padrão, indicamos a senha root);</li>
+				<li>Informe novamente a senha do MySQL para restaurar o banco de dados. A senha foi informada na tela de instalação do MySQL (por padrão, indicamos a senha root);</li>
+				<li>Informe “S” caso deseje converter dados da Contabilidade (Contas e Históricos);</li>
+				<li>Informe “S” caso deseje converter dados da Escrita Fiscal(Clientes e Fornecedores);</li>
+					<div class="w3-panel w3-pale-red w3-border">
+						<span>&#9888; <b>IMPORTANTE:</b> A tabela de Clientes e Fornecedores no EBS é única. O Conversor irá converter os Clientes conforme as notas de saídas (tabela “lansaida”), e os Fornecedores, conforme as notas de entrada (tabela “lanentrada”), para cada empresa que conter esses dados.
+					</div>
+				<li>Aguarde até o final do processo;</li>
+				<li>Após isso, avaliar a seção “Verificador” deste manual.</li>
+				<div class="w3-panel w3-pale-red w3-border">
+					<span>&#9888; <b>MUITO IMPORTANTE:</b> As etapas para importação dos dados deste conversor mudaram, portanto, é de extrema importância que seja avaliado o tópico "IMPORTAÇÃO" no menu esquerdo deste manual.</span>
+				</div>
+			</ol>
+		<br><br>
+		<h4><b>Conversão de base tipo MySQL</b></h4>
+		<h5><b>Pasta ebs_Cordilheira do diretório DATA do MySql</b></h5>
+			<ol>
+				<li>No ambiente do cliente, acessar os serviços do windows e parar o serviço MySQL. Geralmente com o nome "MySQLxx", sendo "xx" o numero da versão no mySQL.</li>
+				<li>Acessar a pasta do banco de dados, geralmente em "C:\ProgramData\MySQL\MySQL Server 5.7\Data" e realizar o backup/Cópia de todos os arquivos.</li>
+				<li>Reiniciar o serviço do MySQL paralisado no item 1, para que o cliente posso continuar suas atividades.</li>
+				<li>Após baixar os dados em seu ambiente, descompactar a pasta "Data" (Copiada do ambiente do cliente) em um lugar qualquer.</li>
+				<li>Dentro da pasta descompactada, localizar e copiar a pasta "ebs_cordilheira" e também o arquivo "ibdata1".</li>
+					<p><b>OBS:</b> Não copiar a pasta "mysql" e o arquivo "ib_logfileX". Caso esses arquivos sejam substituídos, talvez o serviço do mysql não consiga iniciar novamente.</p>
+					<p><b>IMPORTANTE:</b> Para o arquivo "ibdata1" é importante que você faça um backup do arquivo original antes de substituí-lo pois irá precisar voltar ao original após a conversão.</p>
+				<li>Parar o serviço MySQL de seu ambiente da mesma forma que indicado no item 1 acima, colar os arquivos dentro da pasta "Data" de seu ambiente, geralmente em "C:\ProgramData\MySQL\MySQL Server 5.7\Data".</li>
+				<li>Iniciar o serviço "MySQLxx"</li>
+				<li>Executar o arquivo "Conversao.bat" na pasta raiz;</li>
+				<ol>
+					<li>Informe um número para controle do atendimento;</li>
+				</ol>
+				<li>Na lista de conversores, informe a opção “EBS-SAGE-AO3”, e pressione “Enter”;</li>
+				<li>Informe a opção “1 - Gerar planilha de empresas”;</li>
+				<li>Informe a opção “S” para realizar a exportação dos dados;</li>
+				<li>Deseja realizar a restauracao do backup EBS? (1-Sim/2-Nao): Selecione a opção 2-não;</li>
+				<li>Aguarde até que o processo seja finalizado;</li>
+				<li>Após isso, avaliar a seção “Verificador” deste manual.</li>
+			</ol>
+		
+		<h4>Exclusão da base no MySQL</h4>
+			<p>Após a conversão definitiva (entrega do banco ao cliente), você pode excluir a base no MySQL para liberar espaço em sua máquina.</p>
+			<p>Para excluir a base no MySQL Workbench:</p>
+			<ol>
+				<li>Parar o serviço MySQL de seu ambiente. Geralmente com o nome "MySQLxx", sendo "xx" o numero da versão no mySQL.</li>
+				<li>Apagar a pasta "ebs_cordilheira" da pasta "Data" do seu ambiente, geralmente em "C:\ProgramData\MySQL\MySQL Server 5.7\Data" e também restaurar o arquivo "ibdata1" original substituído no item 5 da seção anterior.</li>
+				<li>Iniciar o serviço "MySQLxx".</li>
+			</ol>
+			<br>
+	</div>
+  </div>
+<!-- End page content -->
+</div>

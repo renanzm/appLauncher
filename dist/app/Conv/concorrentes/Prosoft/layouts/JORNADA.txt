@@ -1,0 +1,5 @@
+GPSJORNADA
+Código da Empresa,24,4
+Código da Jornada,28,4
+Descrição da Jornada,32,100
+Descrição do esocial,344,100

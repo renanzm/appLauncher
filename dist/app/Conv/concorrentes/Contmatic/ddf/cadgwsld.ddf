@@ -1,0 +1,17 @@
+cadgwsldid,1,4,integer,0
+apelidocadgwsld,5,8,char,0
+identificador,13,3,char,0
+inddata,16,11,char,0
+n1,27,8,double,4
+x1,35,30,char,0
+i1,65,4,integer,0
+campo_char2,69,80,char,0
+campo_integer2,149,4,integer,0
+campo_integer3,153,4,integer,0
+campo_integer4,157,4,integer,0
+campo_char3,161,16,char,0
+x1extra,177,10,char,0
+campo_char4,187,10,char,0
+x3extra,197,40,char,0
+x4extra,237,40,char,0
+x5extra,277,40,char,0

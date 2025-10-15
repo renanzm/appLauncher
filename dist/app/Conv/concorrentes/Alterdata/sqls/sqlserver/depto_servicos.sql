@@ -1,0 +1,28 @@
+SELECT depto.*,
+	   ent_edu.nome AS nome_entidade_educativa,
+	   ent_edu.cnpj AS cnpj_entidade_educativa,
+	   his.dtinicial AS data_inicio,
+	   custo.idcentrodecusto,
+	   fpas.alterceiros,
+	   fpas.alempresas,
+	   fpas.alautonomos,
+	   fpas.cdfpas,
+	   lotacao.codigo AS codigo_esocial
+FROM wdp.depto depto
+LEFT JOIN wcont.ccusto custo
+	ON RIGHT(REPLICATE('0',5) + CONVERT(VARCHAR, depto.cdcentrodecusto),5) = RIGHT(REPLICATE('0',5) + CONVERT(VARCHAR, custo.cdchamada),5)
+LEFT JOIN wdp.empdphistorico his
+	ON RIGHT(REPLICATE('0',5) + CONVERT(VARCHAR, depto.idempresa),5) = RIGHT(REPLICATE('0',5) + CONVERT(VARCHAR, his.idempresa),5)
+	AND depto.iddepartamento = his.iddepartamento
+	AND his.dtinicial = (SELECT MAX(dtinicial)
+                         FROM wdp.empdphistorico his2
+                         WHERE RIGHT(REPLICATE('0',5) + CONVERT(VARCHAR, his.idempresa),5) = RIGHT(REPLICATE('0',5) + CONVERT(VARCHAR, depto.idempresa),5)
+							AND his2.iddepartamento = depto.iddepartamento)
+LEFT JOIN wdp.entidade_educativa AS ent_edu
+	ON RIGHT(REPLICATE('0',5) + CONVERT(VARCHAR, depto.idempresa),5) = RIGHT(REPLICATE('0',5) + CONVERT(VARCHAR, ent_edu.empresa_id),5)
+	AND depto.iddepartamento = ent_edu.departamento_id
+LEFT JOIN wdp.fpas AS fpas
+	ON depto.idfpasgrps = fpas.idfpas
+LEFT JOIN wdp.lotacao_tributaria as lotacao
+	ON his.lotacao_tributaria_id = lotacao.id
+ORDER BY 1, 2, 3

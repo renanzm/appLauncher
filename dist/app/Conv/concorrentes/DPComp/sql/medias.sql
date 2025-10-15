@@ -1,0 +1,4 @@
+SELECT f.*
+FROM dpcomp.tblfich2 f
+INNER JOIN dpcomp.tblevent e ON f.EVENT_FIC2 = e.CODIG_EVEN
+WHERE STR_TO_DATE(CONCAT(f.COMPE_FIC2, '01'), '%Y%m%d') >= CURDATE() - INTERVAL 3 YEAR;

@@ -1,0 +1,4 @@
+id,1,4,integer,0,
+nome,5,30,char,0,
+numcertaprov,37,255,char,0,
+descricao,1933,255,last_char,0,

@@ -1,0 +1,3 @@
+SELECT *
+FROM ParSindFeriadosG
+ORDER BY 1

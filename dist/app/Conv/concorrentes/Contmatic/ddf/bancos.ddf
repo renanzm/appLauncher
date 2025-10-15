@@ -1,0 +1,11 @@
+codid,1,4,integer,0
+numero,5,6,char,0
+agencia,11,8,char,0
+nome,19,40,char,0
+endereco,59,40,char,0
+bairro,99,20,char,0
+municipio,119,30,char,0
+uf,149,2,char,0
+cep,151,9,char,0
+fone,160,15,char,0
+responsavel,175,40,char,0

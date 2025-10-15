@@ -1,0 +1,1 @@
+select * from public.setor order by 1, 2;

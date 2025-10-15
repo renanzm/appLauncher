@@ -1,0 +1,12 @@
+SELECT fmm.CODEMPRESA,
+       fmm.CODEMPREGADO,
+       fmm.DATAINICIAL,
+       fmd.CODEVENTO,
+       fmd.REFERENCIA,
+       fmd.VALOR
+  FROM FO_FMD fmd
+ INNER JOIN FO_FMM fmm
+    ON fmm.IDFMM = fmd.IDFMM
+ WHERE fmm.DATAINICIAL > DATEADD(-3 YEAR TO CURRENT_DATE)
+   AND fmm.TIPOSALARIO = 'M'
+ ORDER BY 1, 2, 3;

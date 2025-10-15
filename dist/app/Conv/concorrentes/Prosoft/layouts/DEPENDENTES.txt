@@ -1,0 +1,15 @@
+GPSFUNC01
+Código da Empresa,24,4
+Código do Funcionário,28,5
+Relação de Dependência,75,2
+Data de Nascimento,77,8
+Dependente do IRRF,85,1
+Dependente do Salario Familia,86,1
+Local de Nascimento,87,15
+Cartório,102,20
+Número do Registro,122,10
+Número do Livro,132,5
+Número da Folha,137,5
+Data da entrega do certidão,142,8
+CPF Dependente,520,14
+Nome do Dependente,562,70

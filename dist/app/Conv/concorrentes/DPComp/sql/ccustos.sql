@@ -1,0 +1,2 @@
+SELECT * FROM tblccust
+ORDER BY 1,2,3,4

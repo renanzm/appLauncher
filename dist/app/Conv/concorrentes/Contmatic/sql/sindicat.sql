@@ -1,0 +1,1 @@
+select * from public.sindicat order by 1, 2;

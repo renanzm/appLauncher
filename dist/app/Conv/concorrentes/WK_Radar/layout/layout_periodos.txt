@@ -1,0 +1,2 @@
+"[Empregado]";"[Período Aquisitivo Inicial]"
+"Periodos";"[Início Período Aquisitivo]";"[Término Período Aquisitivo]";"[Início Período Concessivo]";"[Término Período Concessivo]";"[Dias Falta]";"[Dias Direito]";"[Dias Gozo]";"[Situação]"

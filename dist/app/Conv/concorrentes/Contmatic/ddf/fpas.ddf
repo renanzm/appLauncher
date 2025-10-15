@@ -1,0 +1,4 @@
+fpasid,1,4,integer,0
+percinss,5,8,double,4
+codfpas,13,4,integer,0
+descricao,17,50,char,0

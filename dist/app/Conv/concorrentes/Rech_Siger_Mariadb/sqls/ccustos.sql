@@ -1,0 +1,3 @@
+SELECT *
+FROM ETBEMP_CCU
+ORDER BY etbe_emp

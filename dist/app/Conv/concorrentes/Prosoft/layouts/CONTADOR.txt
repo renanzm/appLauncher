@@ -1,0 +1,20 @@
+PRGCONTADOR
+Código do Contador,23,2
+Nome,25,40
+Apelido,65,20
+Logradouro,85,10
+Nome do Logradouro,95,60
+Numero,155,10
+Complemento,165,20
+Cep,185,9
+Bairro,194,30
+Municipio,224,30
+UF,254,2
+Telefone - DDD,256,5
+Telefone - Numero,261,10
+Numero do CPF,296,11
+RG - Numero,307,18
+RG - Orgão Emissor,325,5
+RG - Data Emissão,330,8
+Numero do CRC,340,25
+E-Mail,393,50

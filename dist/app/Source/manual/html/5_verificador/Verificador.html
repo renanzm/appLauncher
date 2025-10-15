@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Manual Conversores Novo Modelo</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../../css/w3.css">
+		<style>
+			body,h1,h2,h3,h4,h5 {font-family: "Verdana", sans-serif}
+			.w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
+			.w3-third img:hover{opacity: 1}
+		</style>
+		<style>
+			ol > li {
+			counter-increment: item;
+			}
+			ol > li:first-child {
+			counter-reset: item;
+			}
+			ol ol > li {
+			display: block;
+			}
+			ol ol > li:before {
+			content: counters(item, ".") ". ";
+			margin-left: -20px;
+			}
+		</style>
+	</head>
+	<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:50px">
+  <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+	<div class="w3-content" style="max-width:100%">
+		<h2 class="w3-center" id="INTRO"><b>Verificador</b></h2>
+		<br>
+			<h4>Antes de prosseguir, deve-se configurar o usuário “EXTERNO” e uma conexão do tipo “USUARIO” para o banco. Serão solicitados os dados para acesso ao banco na próxima etapa.</h4>
+			<div class="w3-panel w3-pale-red w3-border">
+				<span>&#9888; <b>IMPORTANTE:</b> Deve ser utilizado o banco de dados do cliente, pois serão exportas as empresas do banco para comparação com as empresas da conversão.
+			</div>
+			<ol>				
+				<li>Selecione a opção "1 - Gerar relação de empresas" na primeira geração dos dados;</li>
+				<li>Caso a conversão disponibilize a possibilidade de converter o plano de contas do cliente:</li>
+				<ol>
+					<li>Selecione "S" na pergunta "Será realizado de para das contas?(S/N)" para que sejam gerados os dados necessários";</li>
+					<ol>
+						<li>Este item está condicionado a correta configuração do Perfil, para mais detalhes consulte a seção "Replicação de Perfil";</li>
+					</ol>
+				</ol>
+				<li>Informe o nome da conexão com o banco de dados Dominio.</li>
+				<li>Informe o usuário externo.</li>
+				<li>Informe a senha do usuário externo.</li>
+			</ol>
+			<br>
+			<h4>Após a primeira etapa, onde foi selecionada a opção “1 -Gerar relação de empresas”, realizar os procedimentos conforme abaixo:</h4>
+
+			<ol>
+				<li>Preencher a coluna "CONVERTER", "PERFIL" e "Faseamento (Grupo E-Social)", salvando antes de continuar o processo, mais detalhes da coluna "PERFIL" podem ser encontrados na seção "Replicação de Perfil";</li>
+
+				<li>Acessar a pasta “Conversoes\000” (onde “000” é o número da conversão);</li>
+				<li>Avaliar que consta uma pasta de nome "Enviar";</li>
+				<li>Será necessário realizar o filtro de empresas e de-para de contas se for o caso:</li>
+				<ol>
+					<li>Execute o arquivo "Relacionamento.exe";</li>
+					<li>Preencher a coluna "CONVERTER", "PERFIL" e "Faseamento (Grupo E-Social)", salvando antes de continuar o processo, mais detalhes da coluna "PERFIL" podem ser encontrados na seção "Replicação de Perfil";</li>
+					<li>Se for o caso, realize o de-para das contas</li>
+				</ol>
+				<li>Após realizado o filtro, acesse a pasta "DataBase", copie o arquivo "temp.db" e cole na pasta do item 2. Execute novamente o arquivo "Conversao.bat";</li>
+				<div><img src="..\..\images\5_verificador\local_banco.png" class="w3-border w3-padding"></div>
+				<li>Informe o número da conversão em questão;</li>
+				<li>Selecione a opção “2 - Gerar dados para importação”;</li>
+				<li>Informe o nome da conexão com o banco de dados Dominio.</li>
+				<li>Informe o usuário externo.</li>
+				<li>Informe a senha do usuário externo.</li>
+				<li>Deseja importar parâmetros para empresas sem eSocial e afastamentos?(S/N). Com essa opção serão gerados parâmetros para todas as empresas.</li>
+				<li>Informe a competência de inicio do eSocial no Domínio. Informar a data de início de utilização do banco de dados.</li>
+				<li>Importar somente empregados ativos (S/N)?.</li>
+				<li>Deseja realizar filtro de demitidos (S/N)?</li>
+				<li>Ignorar empregados demitidos anterior a (XX/XX/XXXX).</li>
+				<li>
+					Informe o número do contrato.
+					<ol>
+						<li>Para conversões sem contrato será preciso abrir uma SCD para o time de ETL, para que seja avaliado o motivo da conversão não possuir contrato e realizar a liberação para conversão.</li>
+					</ol>
+				</li>
+				<li>Os dados de conexão são usados para exportar os dados do banco Domínio para posterior comparação com os dados convertidos, como Sindicatos já existentes, por exemplo;</li>
+				<li>Após finalizado o processo, os arquivos prontos para importação estarão na pasta "Conversoes\000\prontos" (onde “000” é o número da conversão).</li>
+			</ol>
+			
+			<h3>Relatório dados cadastrados</h3>
+			<p>Poderá ser gerado também um arquivo com nome "relacao_dados_cadastrados.html", esse relatório é gerado quando a empresa a ser importada já tiver dados cadastrados no sistema, demonstrando quantos registros existem nos principais cadastros no sistema. Ele irá ser semelhante a imagem abaixo:</p>
+			<div><img src="..\..\images\5_verificador\relacao_dados_cadastrados.png" class="w3-border w3-padding"></div>
+			<p>Quando há um número informado na coluna, esse número indica quantos registros há no sistema para aquele cadastro.</p>
+			<p>E o sinal de ✓ indica que não há nenhum registro cadastrado no banco.</p>
+		<br>
+		<h4><b>Treinamento:</b></h4>
+			<p>Vídeo explicativo está disponível no FTP:
+			<br>/unidades/Pub/Conversores/[Conversor Thomson Reuters]/[ Treinamentos ]	
+	</div>
+  </div>
+<!-- End page content -->
+</div>

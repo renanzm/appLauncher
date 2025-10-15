@@ -1,0 +1,8 @@
+GPSEREC
+Competencia,0,0
+Código da Empresa,5,4
+Código do Funcionário,18,5
+Código do Evento,23,3
+Horas ou Dias,62,6
+Valor,68,12
+

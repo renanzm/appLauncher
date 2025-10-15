@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Manual Conversores Novo Modelo</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../../css/w3.css">
+		<style>
+			body,h1,h2,h3,h4,h5 {font-family: "Verdana", sans-serif}
+			.w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
+			.w3-third img:hover{opacity: 1}
+		</style>
+		<style>
+			ol > li {
+			counter-increment: item;
+			}
+			ol > li:first-child {
+			counter-reset: item;
+			}
+			ol ol > li {
+			display: block;
+			}
+			ol ol > li:before {
+			content: counters(item, ".") ". ";
+			margin-left: -20px;
+			}
+		</style>
+	</head>
+	<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:50px">
+  <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+	<div class="w3-content" style="max-width:100%">
+		<h2 class="w3-center" id="INTRO"><b>Folhamatic</b></h2>
+		<br>
+		<h4><b>Base de dados concorrente</b></h4>
+		
+		<li><b>Versão PostgreSQL</b></li>
+			<p>O banco de dados do concorrente deve estar no formato “.backup”, podendo ser em uma ou várias partes.<br>
+				Os procedimentos de como gerar o backup no cliente podem ser avaliados nas imagens abaixo.</p>
+			<p>Para essa versão do sistema, também será necessário a cópia de alguns arquivos diretamente da pasta do sistema.<br>
+ 			Por isso desenvolvemos um utilitário que copia somente os arquivos necessários. <br>
+			O utilitário deverá ser inserido dentro da pasta 'folhawin', normalmente localizada no diretório raiz do servidor em 'C:\folhawin'.<br>
+			Junto dele, há um manual de instruções para auxiliar o usuário.<br>
+			O processo é simples, portanto, poderá ser realizado facilmente pelo cliente.</p>
+			<p><b>Importante: </b><br>
+			O processo deverá ser realizado diretamente no servidor do cliente. <br>
+			Não poderá haver nenhum aplicativo do sistema Folhamatic em execução e nenhum usuário utilizando o sistema. <br>
+			Os arquivos serão copiados para uma pasta 'dados' dentro da pasta do utilitário. <br>
+			O utilitário de captura de dados está disponível no FTP (/unidades/Pub/Conversores/[Conversor Thomson Reuters]/[ Utilitarios ]).</p> <br>
+
+			<!-- !SLIDESHOW FOLHAMATIC BACKUP! -->
+			<style>
+			.folhamatic_pgre_Slides {display:none;}
+			</style>
+
+			<div class="w3-content w3-display-container">
+
+			<div class="w3-display-container folhamatic_pgre_Slides">
+			  <img src="..\..\images\2_conversores\folhamatic_001.png" style="width:100%">
+			  <div class="w3-black">
+			  </div>
+			</div>
+
+			<div class="w3-display-container folhamatic_pgre_Slides">
+			  <img src="..\..\images\2_conversores\folhamatic_002.png" style="width:100%">
+			  <div class="w3-black">
+			  </div>
+			</div>
+
+			<div class="w3-display-container folhamatic_pgre_Slides">
+			  <img src="..\..\images\2_conversores\folhamatic_003.png" style="width:100%">
+			  <div class="w3-black">
+			  </div>
+			</div>
+
+			<div class="w3-display-container folhamatic_pgre_Slides">
+			  <img src="..\..\images\2_conversores\folhamatic_004.png" style="width:100%">
+			  <div class="w3-black">
+			  </div>
+			</div>
+
+			<div class="w3-display-container folhamatic_pgre_Slides">
+			  <img src="..\..\images\2_conversores\folhamatic_005.png" style="width:100%">
+			  <div class="w3-black">
+			  </div>
+			</div>
+
+			<div class="w3-display-container folhamatic_pgre_Slides">
+			  <img src="..\..\images\2_conversores\folhamatic_006.png" style="width:100%">
+			  <div class="w3-black">
+			  </div>
+			</div>
+
+			<div class="w3-display-container folhamatic_pgre_Slides">
+			  <img src="..\..\images\2_conversores\folhamatic_007.png" style="width:100%">
+			  <div class="w3-black">
+			  </div>
+			</div>
+
+			<div class="w3-display-container folhamatic_pgre_Slides">
+			  <img src="..\..\images\2_conversores\folhamatic_008.png" style="width:100%">
+			  <div class="w3-black">
+			  </div>
+			</div>
+
+			<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+			<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+
+			</div>
+
+			<script>
+			var slideIndex = 1;
+			showDivs(slideIndex);
+
+			function plusDivs(n) {
+			  showDivs(slideIndex += n);
+			}
+
+			function showDivs(n) {
+			  var i;
+			  var x = document.getElementsByClassName("folhamatic_pgre_Slides");
+			  if (n > x.length) {slideIndex = 1}
+			  if (n < 1) {slideIndex = x.length}
+			  for (i = 0; i < x.length; i++) {
+				 x[i].style.display = "none";  
+			  }
+			  x[slideIndex-1].style.display = "block";  
+			}
+			</script>
+			<!-- !end SLIDESHOW FOLHAMATIC BACKUP! -->
+			<br>
+		<br>
+		<h4><b>Programas necessários</b></h4>
+			<li>Strawberry Perl</li>
+			<li>Microsoft Excel, versão 97/2003 ou superior</li>
+			<li>Acesso à Internet</li>
+			<li>PostgreSQL 17.2</li>
+				<div class="w3-panel w3-pale-red w3-border">
+				<span>&#9888; <b>IMPORTANTE:</b> Após instalar o PostgreSQL, acessar a variável Path do Windows e confirmar se foi adicionado o caminho da pasta “bin” do Postgre. Caso não, deve-se adicionar manualmente, pois o Conversor faz a chamada do executável pela Path do Windows.</span>
+				</div>
+			<p>Com exceção do Microsoft Excel, todos os demais programas podem ser baixados no FTP:<br>/unidades/Pub/Conversores/[Conversor Thomson Reuters]/[Instaladores]</p>
+		<br>
+		<h4><b>Treinamento</b></h4>
+			<p>O treinamento está disponível no FTP:<br>/unidades/Pub/Conversores/[Conversor Thomson Reuters]/[ Treinamentos ]</p>
+		<br>
+		<h4><b>Conversão Versão PostgreSQL</b></h4>
+		<h5><b>Criando uma database no pgAdmin</b></h5>
+			<p>O conversor possui uma rotina automática de restauração do backup Postgre, porém, para que esse processo funcione corretamente, é necessário criar uma database no programa pgAdmin, conforme passos abaixo:</p>
+			<ol>
+				<li>Primeiramente, abrir o programa pgAdmin e conectar no Servidor;</li>
+				<li>Clicar com o botão direito em “Databases -> Create -> Database...”;</li>
+				<li>No campo “Database”, informar “folha” (sem aspas) e clicar no botão “Save”;</li>
+				<li>Após criar a database, proceder com a conversão conforme passos abaixo.</li>
+				<div><img src="..\..\images\2_conversores\folhamatic_009.png" class="w3-border w3-padding"></div>
+			</ol>
+		<br>
+		<h5><b>Passos da conversão PostgreSQL</b></h5>
+			<ol>
+
+				<li>Alocar o backup do sistema concorrente e os arquivos "SQL" (Copiados pelo utilitário) dentro da pasta "Dados_Concorrente";</li>
+				<li>Executar o arquivo "Conversao.bat" na pasta raiz;</li>
+				<li>Informe um número para controle do atendimento;</li>
+				<li>Na lista de conversores, informe a opção “Folhamatic”, e pressione “Enter”;</li>
+				<li>Informe “1” para a versão PostgreSQL;</li>
+				<li>Informe a opção “1 - Gerar planilha de empresas”;</li>
+				<li>Informe a opção “S” para restaurar os dados no pgAdmin (caso já tenha restaurado anteriormente, selecione “N”);</li>
+				<li>Na tela seguinte, pressione “Enter” para continuar o processo;</li>
+				<li>Na mensagem “Digite a porta do banco de dados PostgreSQL desejada”, informar a porta configurada no pgAdmin, conforme imagem exemplo abaixo:</li>
+				<div><img src="..\..\images\2_conversores\folhamatic_010.png" class="w3-border w3-padding"></div>
+				<br>
+				<li>Tecle “Enter” para iniciar o processo de restauração da base Postgre, podendo levar vários minutos ou horas, dependendo do tamanho da base e da máquina utilizada no processo;</li>
+				<li>Aguarde até que o processo seja finalizado;</li>
+				<li>Na opção de exportar dados, pressione "1" para que os dados sejam extraídos da base Folhamatic.</li>
+				<li>Continue as demais etapas do processo; em seguida, avaliar a seção “Verificador” deste manual.</li>
+				<div class="w3-panel w3-pale-red w3-border">
+				<span>&#9888; <b>MUITO IMPORTANTE:</b> As etapas para importação dos dados deste conversor mudaram, portanto, é de extrema importância que seja avaliado o tópico "IMPORTAÇÃO" no menu esquerdo deste manual.</span>
+				</div>
+			</ol>
+			<br>
+		<h4><b>Exclusão da base no pgAdmin III</b></h4>
+			<p>Após a conversão definitiva (entrega do banco ao cliente), você pode excluir a base no pgAdmin para liberar espaço em sua máquina, seguindo os passos abaixo:</p>
+			<ol>
+				<li>Primeiramente, abrir o programa pgAdmin;</li>
+				<li>Clicar no sinal de “>” em “Databases” para expandir as bases existentes;</li>
+				<li>Clicar com o botão direito do mouse na database desejada e selecionar “Delete/Drop...”;</li>
+				<li>Clicar em “Sim” na tela de confirmação e aguardar o processo finalizar.</li>
+			</ol>
+			<div><img src="..\..\images\2_conversores\folhamatic_012.png" class="w3-border w3-padding"></div>
+			<br>
+	</div>
+  </div>
+<!-- End page content -->
+</div>

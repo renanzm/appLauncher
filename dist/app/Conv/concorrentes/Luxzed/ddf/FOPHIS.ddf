@@ -1,0 +1,9 @@
+FOPHIS.ARQ	106
+codigo	1	5	char
+competencia	7	4	date	yymm
+empresa	12	2	char
+i_depto	15	2	char
+i_cargo	18	5	char
+salario	24	10	numeric	2
+tipo_sal	35	1	char
+descricao	36	40	char

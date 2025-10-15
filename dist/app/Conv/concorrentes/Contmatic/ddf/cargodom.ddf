@@ -1,0 +1,4 @@
+domid,1,4,integer,0
+codcargo,5,4,integer,0
+motivo,9,30,char,0
+dataalteracao,39,4,date,0

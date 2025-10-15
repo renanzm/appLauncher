@@ -1,0 +1,9 @@
+SELECT PCTEFP_JTU.*, 
+       FTABEL_JOR.*,
+	   FOTGEN_INJ.*
+FROM PCTEFP_JTU
+INNER JOIN FTABEL_JOR
+ON PCTEFP_JTU.pcte_jor = FTABEL_JOR.ftab_cjor092
+LEFT JOIN FOTGEN_INJ
+ON PCTEFP_JTU.pcte_jor = FOTGEN_INJ.fotg_jor011
+ORDER BY pcte_emp, pcte_tur008, pcte_dia 

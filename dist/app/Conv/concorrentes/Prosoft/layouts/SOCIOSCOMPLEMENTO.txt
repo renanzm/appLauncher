@@ -1,0 +1,7 @@
+GPRSOCIOSCOMPL
+Código Empresa,6,4
+Código do Sócio,10,3
+Categoria do Trabalhador,303,3
+Nome do Socio,341,40
+Filiação - Nome da Mãe,481,40
+Filiação - Nome do Pai,551,40

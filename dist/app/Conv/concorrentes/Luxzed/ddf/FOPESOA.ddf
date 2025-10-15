@@ -1,0 +1,5 @@
+FOPESOA.ARQ	395
+codigo	11	4	char
+evento	4	6	char
+codigo_esocial	167	7	char
+recibo	283	23	char

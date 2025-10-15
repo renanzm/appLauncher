@@ -1,0 +1,18 @@
+SELECT DISTINCT
+       jor_emp.CODEMPFOL,
+       jor_emp.CODHORTRB,
+       jor_dia.INIHORTRBDIASEM,
+       jor_dia.FIMHORTRBDIASEM,
+       inter.HORINIINT,
+       inter.HORTERINT
+  FROM TBLHORTRBCTT jor_emp
+ INNER JOIN TBLHORTRBDIASEM jor_dia
+    ON jor_dia.CODHORTRB = jor_emp.CODHORTRB
+  LEFT JOIN TBLHORTRBDIASEMINT inter_hor
+    ON inter_hor.CODHORTRB = jor_dia.CODHORTRB
+   AND inter_hor.CODDIASEM = jor_dia.CODDIASEM
+  LEFT JOIN TBLINT inter
+    ON inter.CODINT = inter_hor.CODINT
+ WHERE jor_dia.INIHORTRBDIASEM IS NOT NULL
+   AND jor_dia.INIHORTRBDIASEM IS NOT NULL
+ ORDER BY CODEMPFOL

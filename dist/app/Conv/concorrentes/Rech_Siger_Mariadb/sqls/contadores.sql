@@ -1,0 +1,4 @@
+SELECT *
+FROM YOEMPR_DCO
+WHERE yoem_tec IS NOT NULL AND yoem_tec <> ''
+ORDER BY yoem_sig021

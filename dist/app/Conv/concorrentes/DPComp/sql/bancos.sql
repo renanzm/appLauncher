@@ -1,0 +1,2 @@
+SELECT * FROM tblbanco
+ORDER BY 1,2

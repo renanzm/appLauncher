@@ -1,0 +1,7 @@
+SELECT CODEMP,
+       CODCAD,
+       ANOMES,
+       CODHOR,
+	   CODFRQ
+FROM PHCCAD2
+ORDER BY 1, 2, 3

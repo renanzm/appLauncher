@@ -1,0 +1,7 @@
+SELECT CODFUNC,
+       SEQUENCIA,
+       INICIO,
+       CODHORARIO
+  FROM DATABASE.histhorario
+ ORDER BY CODFUNC,
+          INICIO;

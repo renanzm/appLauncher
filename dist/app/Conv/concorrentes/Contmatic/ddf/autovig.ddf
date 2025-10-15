@@ -1,0 +1,4 @@
+autoid,1,4,integer,0
+datainicio,7,4,date,0
+infoint1,11,4,integer,0
+infoint2,15,1,integer,0

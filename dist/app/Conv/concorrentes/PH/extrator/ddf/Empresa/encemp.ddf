@@ -1,0 +1,7 @@
+ano_mes, 6, 10, competence
+per_inss, 10, 14, float
+per_aliq_rat, 14, 18, float
+per_fgts, 18, 22, float
+per_fgts_menor_aprendiz, 22, 26, float
+per_aliq_rat_constru_civil, 26, 30, float
+fap, 30, 34, float

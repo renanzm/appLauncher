@@ -1,0 +1,12 @@
+FOPDEP2.ARQ	112
+codigo	1	5	char
+tipo	7	2	char
+cidade	10	20	char
+estado	31	2	char
+cartorio	34	20	char
+registro	55	7	char
+livro	63	7	char
+folha	71	7	char
+data_entrega	79	6	date	ddmmyy
+data_baixa	86	6	date	ddmmyy
+cpf	94	11	char

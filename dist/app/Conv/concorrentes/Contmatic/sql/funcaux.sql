@@ -1,0 +1,1 @@
+select * from public.funcaux order by 1, 2;

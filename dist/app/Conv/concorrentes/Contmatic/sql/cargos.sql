@@ -1,0 +1,1 @@
+select * from public.cargos order by 1, 2;

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Manual Conversores Novo Modelo</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../../css/w3.css">
+		<style>
+			body,h1,h2,h3,h4,h5 {font-family: "Verdana", sans-serif}
+			.w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
+			.w3-third img:hover{opacity: 1}
+		</style>
+		<style>
+			ol > li {
+			counter-increment: item;
+			}
+			ol > li:first-child {
+			counter-reset: item;
+			}
+			ol ol > li {
+			display: block;
+			}
+			ol ol > li:before {
+			content: counters(item, ".") ". ";
+			margin-left: -20px;
+			}
+		</style>
+	</head>
+	<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:50px">
+  <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+	<div class="w3-content" style="max-width:100%">
+		<h2 class="w3-center" id="INTRO"><b>Vincular Matriz e Filiais</b></h2>
+		<br>
+		<p>Para realizar a parametrização de vínculo entre matriz e filais das empresas, será demonstrada a seguinte opção após a execução da etapa de verificação:</p>
+		<div><img src="..\..\images\8_vincular_matriz_filial\opcao_pergunta.png" class="w3-border w3-padding"></div>
+		<br>
+		<p>Caso deseje realizar a parametrização de vínculo entre matriz e filais, informe "1" para sim e finalize a execução do conversor. Dentro da pasta "prontos" irá ser gerada uma pasta a mais, com o nome "6-Vincular Matriz Filial" conforme imagem abaixo:</p>
+		<div><img src="..\..\images\8_vincular_matriz_filial\nova_pasta.png" class="w3-border w3-padding"></div>
+		<br>
+		<div class="w3-panel w3-pale-red w3-border">
+			<span>&#9888; <b>IMPORTANTE:</b> Para que essa configuração funcione corretamente, as empresas matriz e filial devem possuir algum parametro gravado, sendo ele o importado da conversão ou gravado pelo sistema. É importante salientar também que neste processo, é necessário excluir toda movimentação das filiais nos módulos Escrita e Contabilidade. Logo, todos os lançamentos, históricos, configurações de impostos, contas, clientes e fornecedores cadastrados nestes módulos para as filiais, serão perdidos. Diante disso, essa configuração não é indicada para bancos em uso onde já há movimentação nos módulos Escrita Fiscal e Contabilidade.
+		</div>
+		<br>
+		<h4><b>Parametrização via comando SQL</b></h4>
+		<ol>
+			<li>Abrindo a pasta "6-Vincular Matriz Filial", será encontrado o arquivo "Vincula_Matriz_Filial.sql" que deverá ser executado no sistema.</li>
+			<li>O comando SQL irá identificar as empresas matriz e filais provenientes da conversão, realizará as exclusões necessárias e aplicará a parametrização de vínculo entre elas.</li>
+		</ol>
+		<p>Após o témino da execução do comando, avaliar os vínculos realizados nos parametros dos módulos Escrita Fiscal, Contabilidade e Folha</p>
+		<br>
+		<h5><b>Itens configurados pelo comando SQL:</b></h5>
+		<ol>
+			<li>Configura parametro das empresas MATRIZ conforme imagens abaixo.</li>
+			<ol>
+			<li>Contabilidade.</li>
+			<div><img src="..\..\images\8_vincular_matriz_filial\configuracao_matriz_contabilidade_parametro.png" class="w3-border w3-padding"></div>
+			<br>
+			<li>Fiscal.</li>
+			<div><img src="..\..\images\8_vincular_matriz_filial\configuracao_matriz_fiscal_parametro.png" class="w3-border w3-padding"></div>
+			</ol>	
+			<li>Nas FILIAIS</li>
+			<ol>
+			<li>Exclui Contas contábeis e Históricos bem como seus vínculos com outros módulos.</li>
+			<li>Configura parâmetro do Contabilidade.</li>
+			<div><img src="..\..\images\8_vincular_matriz_filial\configuracao_filial_contabilidade_parametro.png" class="w3-border w3-padding"></div>
+			<li>Configura parâmetro do Fiscal.</li>
+			<div><img src="..\..\images\8_vincular_matriz_filial\configuracao_filial_fiscal_parametro.png" class="w3-border w3-padding"></div>
+			<div><img src="..\..\images\8_vincular_matriz_filial\configuracao_filial_fiscal_parametro_contabilidade.png" class="w3-border w3-padding"></div>
+			<li>Configura parâmetro da Folha.</li>
+			<div><img src="..\..\images\8_vincular_matriz_filial\configuracao_filial_folha_parametro.png" class="w3-border w3-padding"></div>
+			</ol>
+		</ol>	
+		<h4><b>Treinamento:</b></h4>
+		<br>Treinamento disponivel no FTP: /unidades/Pub/Conversores/[Conversor Thomson Reuters]/[ Treinamentos ]/configura_matriz_filial.mp4</br>
+	</div>
+  </div>
+<!-- End page content -->
+</div>

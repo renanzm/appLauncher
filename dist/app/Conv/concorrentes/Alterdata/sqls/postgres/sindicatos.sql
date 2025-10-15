@@ -1,0 +1,3 @@
+SELECT *
+FROM wdp.sind
+ORDER BY 1, 2

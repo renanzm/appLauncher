@@ -1,0 +1,1 @@
+select * from public.func order by 1, 2;

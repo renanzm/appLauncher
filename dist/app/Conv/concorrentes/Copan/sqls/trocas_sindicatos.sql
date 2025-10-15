@@ -1,0 +1,8 @@
+SELECT COD_EMP,
+       COD_FUN,
+       TIPO,
+       COMPETENCIA,
+       COD_SIND,
+       VALOR_REC
+FROM FUNCIONARIO_SIND
+ORDER BY 1, 2, 3, 4

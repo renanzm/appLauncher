@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Manual Conversores Novo Modelo</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../../css/w3.css">
+		<style>
+			body,h1,h2,h3,h4,h5 {font-family: "Verdana", sans-serif}
+			.w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
+			.w3-third img:hover{opacity: 1}
+		</style>
+		<style>
+			ol > li {
+			counter-increment: item;
+			}
+			ol > li:first-child {
+			counter-reset: item;
+			}
+			ol ol > li {
+			display: block;
+			}
+			ol ol > li:before {
+			content: counters(item, ".") ". ";
+			margin-left: -20px;
+			}
+		</style>
+	</head>
+	<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:50px">
+  <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+	<div class="w3-content" style="max-width:100%">
+		<h2 class="w3-center" id="INTRO"><b>Luxzed</b></h2>
+		<br>
+		<h4><b>Base de dados concorrente</b></h4>
+			<p>Para esta conversão serão necessários os arquivos gerados pelo Utilitário disponibilizado no FTP: /unidades/Pub/Conversores/[Conversor Thomson Reuters]/[ Utilitarios ]</p>
+			<br>
+			<p><b>Procedimento necessário antes da coleta:</b></p>
+			<p>Na conversão do sistema Luxzed, para que as alterações salariais e outras informações dos históricos sejam convertidas corretamente, é necessário que seja feito o procedimento
+				de remontagem de fichas de todos os funcionários. Isso porque se esse procedimento não ser feito há uma grande possibilidade de alterações salariais e outras informações virem
+				divergentes na conversão.
+			</p>
+			<p>Esse procedimento de remontagem das fichas deve ser feito antes da coleta dos dados seguindo o passo a passo a seguir:</p>
+			<table>
+				<li>Acessar o menu "MCA Manutenção de Cadastros";</li>
+				<li>Acessar o submenu "HIS Histórico Funcional";</li>
+				<li>Acessar o submenu "REM Remontagem - Elimina e Refaz Histórico";</li>
+				<li>Após isso preencher a tela que irá abrir da seguinte forma:</li>
+				<li><div><img src="..\..\images\2_conversores\luxzed_ficha.png" class="w3-border w3-padding"></div></li>
+				<li>Caso apareça a mensagem "Pesquisa Férias (S/N)", informe "S";</li>
+				<li>Agora basta aguardar o processo ser finalizado;</li>
+			</table>
+			<p>O procedimento acima deve ser feito para <b>TODAS</b> as empresas que serão convertidas, pois o sistema Luxzed tem algumas inconsistências com relação a históricos de empregados, que causarão a divergência
+				de algumas informações na conversão caso o procedimento acima não seja feito.
+			</p>
+
+
+		<br>
+		<h4><b>Programas necessários</b></h4>
+			<li>Python 3.11 (64 bits)</li>
+			<li>Microsoft Excel, versão 97/2003 ou superior</li>
+			<li>Acesso à Internet</li>
+			<p>Com exceção do Microsoft Excel, todos os demais programas podem ser baixados no FTP:<br>/unidades/Pub/Conversores/[Conversor Thomson Reuters]/[Instaladores]</p>
+		<h4><b>Treinamento</b></h4>
+			<p>O treinamento está disponível no FTP:<br>/unidades/Pub/Conversores/[Conversor Thomson Reuters]/[ Treinamentos ]</p>
+		<br>
+		<h4><b>Conversão</b></h4>
+			<ol>
+				<li>Acessar a pasta "Dados_Concorrente" na raiz do conversor;</li>
+				<ol>
+					<li>Colar as pastas que possuem o nome "ARQ001, ARQ002..." geradas pelo Utilitário;</li>
+				</ol>
+				<li>Executar o arquivo "Conversao.bat" na pasta raiz;</li>
+				<ol>
+					<li>Informe um número para controle do atendimento;</li>
+				</ol>
+				<li>Na lista de conversores, informe a opção Luxzed”, e pressione “Enter”;</li>
+				<li>Informe a opção “1 - Gerar planilha de empresas”;</li>
+				<li>Informe a opção “S- Sim” para exportar os dados (caso já tenha realizado anteriormente, informe “N- Não”);</li>
+				<li>Aguarde os procedimentos em tela, o tempo varia conforme o tamanho da base concorrente e máquina utilizada;</li>
+				<li>Após isso, avaliar a seção “Verificador” deste manual.</li>
+			</ol>
+		<br>
+	</div>
+  </div>
+<!-- End page content -->
+</div>

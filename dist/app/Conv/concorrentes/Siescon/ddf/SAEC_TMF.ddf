@@ -1,0 +1,3 @@
+tmf_tipo_movimento,1,6,char,0
+ocf_codigo_para_rais,61,2,char,0
+ocf_codigo_para_fgts,65,2,char,0

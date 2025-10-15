@@ -1,0 +1,7 @@
+saldomid,1,4,integer,0
+domid,5,4,integer,0
+valor,9,8,double,6
+motivo,17,30,char,0
+dataalteracao,47,4,date,0
+datadissidio,51,4,date,0
+tiposalario,55,4,integer,0

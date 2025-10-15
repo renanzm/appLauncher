@@ -1,0 +1,3 @@
+GPSMOTALT
+Codigo,23,3
+motivo,26,150

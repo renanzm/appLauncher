@@ -1,0 +1,7 @@
+GPSFUNC04
+Número Sequencial,23,12
+Empresa,35,4
+Funcionário,39,5
+Tipo de Movimento,44,3
+Data de Inicio da Ocorrência,47,8
+Data de Fim da Ocorrência,55,8

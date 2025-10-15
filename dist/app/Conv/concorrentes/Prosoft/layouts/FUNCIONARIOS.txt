@@ -1,0 +1,118 @@
+FUNCIONARIOS
+D1,Codigo - Empresa
+D1,Codigo - Funcionário
+D1,Admissão - Código do Sindicato
+D1,Admissão - Data da Admissão
+D1,Admissão - Data da Opçao FGTS
+D1,Admissão - Emprego Anterior
+D1,Admissão - Número da Conta FGTS
+D1,Admissão - Vínculo Empregatício
+
+D2,Cart. Profissional - Data Expedição
+D2,Cart. Habilitação - Categoria
+D2,Cart. Habilitação - Data Expedição
+D2,Cart. Habilitação - Data Validade
+D2,Cart. Habilitação - Número
+D2,Carteira Profissional- Número/Série
+D2,Certificado Reservista -Categoria
+D2,Certificado Reservista - Número
+D2,Estado civil
+
+D3,Divisão RH
+D3,CPF número
+D3,Nascimento - Data
+D3,Demissão - Data da Demissão
+D3,Endereço - Bairro
+D3,Endereço - CEP
+D3,Funçao -Descrição
+D3,Raça/Cor
+D3,RG - Data Emissão
+
+D4,E-Mail
+D4,Endereço - Complemento
+D4,Endereço - Município
+D4,Endereço - Número
+D4,Endereço - Tipo do Logradouro
+D4,Endereço - UF
+D4,RG - UF
+
+D5,Endereço - Nome do Logradouro
+D5,Grau de Instrução
+D5,PIS - Data cadastramento
+D5,PIS - Número
+D5,RG - Número
+
+D6,Nome do Funcionário
+D6,Sexo
+D6,RG - Orgão Emissor
+D6,Telefone - DDD
+D6,Telefone - Número
+D6,Nascimento - Local
+
+D7,Título Eleitor - Número
+D7,Título Eleitor - Seção
+D7,Título Eleitor - Zona
+D7,Numero de Matricula eSocial
+D7,Categoria de trabalhador-EFD Social
+D7,UF Nascimento
+D7,Empregador Anterior - CNPJ
+
+D8,Empregador Ant Matri Data Ini Vinc
+D8,Empregador Ant Matri Trabalhador
+D8,Código Municipio Nascimento
+D8,Indicativo de Admissão
+D8,Tipo de Admissão
+
+D9,Código Municipio Moradia
+D9,Filiação - Nome da Mãe
+D9,Estag Agente CEP
+
+D10,Filiação - Nome do Pai
+D10,Estag Agente CNPJ
+D10,Estag Agente Bairro
+D10,Estag Agente Numero
+
+D11,Estag Agente Nome Razao Social
+D11,Estag Agente Código Municipio
+D11,C/C Contábil
+
+D12,Estag Agente Logradouro
+D12,Coordenador Estágio - CPF
+D12,Estagiário - Instituição - Municipio
+
+D13,Estagiário - Instituição - Bairro
+D13,Estagiário - Instituição - CEP
+D13,Estagiário - Instituição - Logradouro
+D13,Estagiário - Instituição - Número
+
+D14,Estagiário - Natureza de Estágio
+D14,Estagiário - Nível de Estágio
+D14,Carteira Habilitação -Órgão Emissor
+D14,RIC - Data Expedição
+D14,RIC - Numero
+D14,RIC - Orgão Emissor
+D14,Funçao - CBO
+D14,Tipo Sanguineo
+
+D15,Depósito - Banco/Agência
+D15,Horas Base Mês
+D15,Tipo do Salário
+D15,Horas de Trabalho pro semana
+D15,Salário - Base Atual
+D15,Forma de Pagamento
+D15,Depósito - Número da Conta
+D15,Deposito - Dig. Verif. C/Corrente
+
+D16,Agente Nocivo
+
+D17,Estagiário - CNPJ Faculdade
+D17,Novo Código da Jornada
+D17,Conselho Regional - Nome
+D17,Conselho Regional - Numero
+D17,Conselho Regional - Regiao
+
+D18,Estagiário - Nome Coordenador
+D18,Estagiário - Area do Estágio
+D18,Estagiário - Apólice de Seguro
+
+D19,Estagiário - Faculdade

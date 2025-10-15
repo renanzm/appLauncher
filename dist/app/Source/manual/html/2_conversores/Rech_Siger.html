@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Manual Conversores Novo Modelo</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../../css/w3.css">
+		<style>
+			body,h1,h2,h3,h4,h5 {font-family: "Verdana", sans-serif}
+			.w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
+			.w3-third img:hover{opacity: 1}
+		</style>
+		<style>
+			ol > li {
+			counter-increment: item;
+			}
+			ol > li:first-child {
+			counter-reset: item;
+			}
+			ol ol > li {
+			display: block;
+			}
+			ol ol > li:before {
+			content: counters(item, ".") ". ";
+			margin-left: -20px;
+			}
+		</style>
+	</head>
+	<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:50px">
+  <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+	<div class="w3-content" style="max-width:100%">
+		<h2 class="w3-center" id="INTRO"><b>Rech Siger - Mariadb</b></h2>
+		<br>
+		<h4><b>Base de dados concorrente</b></h4>
+			<p>Para a conversão desse concorrente será necessário copiar a pasta completa do banco de dados, os passos para coleta da pasta estão descritos mais abaixo.<br></p>
+			<div class="w3-panel w3-pale-red w3-border">
+				<span><b>IMPORTANTE:</b> Esse conversor está pronto para realizar conversões somente de bancos MARIADB, cheque com o cliente o tipo de base que ele usa antes de iniciar a conversão.</span>
+			</div>
+		<h4><b>Programas necessários</b></h4>
+			<li>Python 3.11 (64 bits)</li>
+			<li>Microsoft Excel, versão 97/2003 ou superior</li>
+			<li>Acesso à Internet</li>
+			<li>MariaDB 11.3</li>
+			<p>Com exceção do Microsoft Excel, todos os demais programas podem ser baixados no FTP:<br>/unidades/Pub/Conversores/[Conversor Thomson Reuters]/[Instaladores]</p>
+		<br>
+		<br>
+		<h4>Passos para coleta do backup</h4>
+		<ol>
+			<li>Parar o serviço <b>"mariadb"</b> do servidor do cliente.</li>
+			<li>Encontrar a pasta "data" do Mariadb, geralmente localizada em "C:\MariaDB\data".</li>
+			<li>Será necessário copiar o arquivo "ibdata1" e também a pasta correspondende ao banco de dados do cliente, a pasta referente ao banco de dados sempre será a maior pasta e com data de atualização mais recente.</li>
+			<li>Após compactar os itens acima, reiniciar o serviço <b>"mariadb"</b> do servidor.</li>
+		</ol>
+		<h4>Restauração do backup</h4>
+		<ol>
+			<li>Instalar na sua máquina o Mariadb disponível no FTP(IMPORTANTE: Se atentar na porta onde será feita a instalação, pois será necessária mais pra frente).</li>
+			<li>Após instalar, parar o serviço <b>"mariadb"</b> da sua máquina.</li>
+			<li>Encontrar a pasta "data" do Mariadb na sua máquina, geralmente localizada em "C:\Program Files\MariaDB 11.3\data".</li>
+			<li>Descompactar o arquivo "ibdata1" e a pasta completa do banco do cliente na pasta "data" encontrada acima.</li>
+			<li>Após isso reiniciar o serviço <b>"mariadb"</b> da sua máquina.</li>
+		</ol>
+		<br>
+		<h4>Execução do conversor</h4>
+		<ol>
+			<li>Executar o arquivo "Conversao.bat" na pasta raiz;</li>
+			<ol>
+				<li>Informe um número para controle do atendimento;</li>
+			</ol>
+			<li>Na lista de conversores, informe a opção "Rech Siger", e pressione "Enter";</li>
+			<li>Informe a opção "1 - Gerar planilha de empresas";</li>
+			<li>Informe a opção "S" para exportar os dados (caso já tenha exportado, selecione "N");</li>
+			<li>Informe o nome do banco de dados(mesmo nome da pasta copiada do servidor do cliente);</li>
+			<li>Informe a porta onde o Mariadb foi instalado(configurada no momento da instalação);</li>
+			<li>Aguarde até o final do processo;</li>
+			<li>Após isso, avaliar a seção "Verificador" deste manual.</li>
+			<div class="w3-panel w3-pale-red w3-border">
+				<span>&#9888; <b>MUITO IMPORTANTE:</b> As etapas para importação dos dados deste conversor mudaram, portanto, é de extrema importância que seja avaliado o tópico "IMPORTAÇÃO" no menu esquerdo deste manual.</span>
+			</div>
+		</ol>
+		<br>
+	</div>
+  </div>
+<!-- End page content -->
+</div>

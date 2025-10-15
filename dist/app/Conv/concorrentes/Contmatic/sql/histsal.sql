@@ -1,0 +1,1 @@
+select * from public.histsal order by 1, 2;

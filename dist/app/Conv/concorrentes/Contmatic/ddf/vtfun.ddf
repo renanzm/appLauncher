@@ -1,0 +1,14 @@
+func,1,4,integer,0
+dataalteracao,5,4,date,0
+tipovt1,9,2,integer,0
+tipovt2,11,2,integer,0
+tipovt3,13,2,integer,0
+tipovt4,15,2,integer,0
+tipovt5,17,2,integer,0
+tipovt6,19,2,integer,0
+qtde1,21,2,integer,0
+qtde2,23,2,integer,0
+qtde3,25,2,integer,0
+qtde4,27,2,integer,0
+qtde5,29,2,integer,0
+qtde6,31,2,integer,0

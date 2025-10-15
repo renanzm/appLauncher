@@ -1,0 +1,7 @@
+SELECT ter_ban.CODIGOEMPRESA,
+       ter.*
+  FROM TERCEIRO ter
+  LEFT JOIN TERCEIROBANCO ter_ban
+    ON ter_ban.CODIGOTERC = ter.CODIGOTERC
+ ORDER BY ter_ban.CODIGOEMPRESA,
+          ter.CODIGOTERC

@@ -1,0 +1,1 @@
+SELECT '{codi_emp}' AS CODI_EMP, * FROM SR7{empresa} ORDER BY 1, 2, 3, 4

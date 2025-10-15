@@ -1,0 +1,7 @@
+SELECT ID,
+       ID_BANCO,
+       CODIGO,
+       DESCRICAO,
+       ENDERECO
+FROM GE_AGENCIAS
+ORDER BY 1

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Manual Conversores Novo Modelo</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../../css/w3.css">
+		<style>
+			body,h1,h2,h3,h4,h5 {font-family: "Verdana", sans-serif}
+			.w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
+			.w3-third img:hover{opacity: 1}
+		</style>
+		<style>
+			ol > li {
+			counter-increment: item;
+			}
+			ol > li:first-child {
+			counter-reset: item;
+			}
+			ol ol > li {
+			display: block;
+			}
+			ol ol > li:before {
+			content: counters(item, ".") ". ";
+			margin-left: -20px;
+			}
+		</style>
+	</head>
+	<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:50px">
+  <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+	<div class="w3-content" style="max-width:100%">
+		<h2 class="w3-center" id="INTRO"><b>DPComp</b></h2>
+		<br>
+		<h4><b>Base de dados concorrente</b></h4>
+			<p>Existem duas formas de realizar a conversão deste concorrente</p>
+			<p>1 - Utilizar o arquivo de backup do MySql no formato “.sql”.</p>
+			<p>2 - Utilizar a pasta DPcomp localizada na pasta do Mysql no servidor do cliente.</p>
+
+			
+		<h4><b>Programas necessários</b></h4>
+			<li>Microsoft Excel, versão 97/2003 ou superior</li>
+			<li>Acesso à internet</li>
+			<li>Python 3.11 (64 bits)</li>
+				<div class="w3-panel w3-pale-red w3-border">
+				<span>&#9888; <b>IMPORTANTE:</b> É necessário que a máquina tenha acesso à internet, pois o Python faz o download de algumas bibliotecas na primeira vez em que é utilizado. A versão 3.9.5 do Python funciona somente no Windows 10 ou posterior.
+				</div>
+			<li>MySQL Community 5.7</li>
+			
+			<p>Com exceção do Microsoft Excel, todos os demais programas podem ser baixados no FTP:<br>/unidades/Pub/Conversores/[Conversor Thomson Reuters]/[ Instaladores ]</p>
+			
+		<h4><b>Treinamento</b></h4>
+			<p>O treinamento está disponível no FTP:<br>/unidades/Pub/Conversores/[Conversor Thomson Reuters]/[ Treinamentos ]</p>
+		<h4><b>Conversão arquivo .SQL</b></h4>
+			<ol>
+				<li>Alocar o backup do sistema concorrente dentro da pasta "Dados_Concorrente";</li>
+				<li>Executar o arquivo "Conversao.bat" na pasta raiz;</li>
+				<ol>
+					<li>Informe um número para controle do atendimento;</li>
+				</ol>
+				<li>Na lista de conversores, informe a opção “DPComp”, e pressione “Enter”;</li>
+				<li>Informe a opção “1 - Gerar planilha de empresas”;</li>
+				<li>Informe a opção “S” para realizar a restauração do backup .SQL fornecido pelo cliente;</li>
+				<ol>
+					<li>Caso seja informado a opção “N”, é necessário que exista uma base já restaurada no MySQL Workbench com o nome “dpcomp_000” (onde 000 é o número informado no item 2.1</li>
+				</ol>
+				<li>Na mensagem “Informe a senha do usuário cadastrada no MySQL”, informar a senha do usuário root do MySQL (por padrão, utilizamos a senha root, configurada durante a instalação do MySQL);</li>
+				<li>Na mensagem “Informe a porta que foi cadastrada no MySQL”, informar a porta configurada no MySQL Workbench, por padrão 3306 (imagem exemplo abaixo);</li>
+				<div><img src="..\..\images\2_conversores\dpcomp_001.png" class="w3-border w3-padding"></div>
+				<ol>
+					<li>Caso já exista uma base de mesmo nome no MySQL, o conversor irá solicitar se você deseja apagar essa base e restaurar a base da conversão atual;</li>
+				</ol>
+				<li>O processo de restauração da base será iniciado, criando uma base no MySQL Workbench com o nome “dpcomp_000” (onde 000 é o número informado no item 2.1);</li>
+				<li>Após a restauração da base, tecle “Enter” para continuar o processo, podendo levar vários minutos ou horas, dependendo do tamanho da base e da máquina utilizada;</li>
+				<li>Aguarde até que o processo seja finalizado;</li>
+				<li>Após isso, avaliar a seção “Verificador” deste manual.</li>
+			</ol>
+		<h4><b>Conversão pasta Data</b></h4>
+			<ol>
+				<li>No ambiente do cliente, acessar os serviços do windows e parar o serviço MySQL. Geralmente com o nome "MySQLxx", sendo "xx" o numero da versão no mySQL.</li>
+				<li>Acessar a pasta do banco de dados, geralmente em "C:\ProgramData\MySQL\MySQL Server 5.7\Data" e realizar o backup/Cópia de todos os arquivos.</li>
+				<li>Reiniciar o serviço do MySQL paralisado no item 1, para que o cliente posso continuar suas atividades.</li>
+				<li>Após baixar os dados em seu ambiente, descompactar a pasta "DADOS" (Copiada do ambiente do cliente) em um lugar qualquer.</li>
+				<li>Dentro da pasta descompactada, localizar e copiar a pasta "dpcomp" e o arquivo "ibdata1"</li>
+				<li>Parar o serviço MySQL  de seu ambiente da mesma forma que indicado no item 1 acima, colar os arquivos dentro da pasta "data" de seu ambiente, geralmente em "C:\ProgramData\MySQL\MySQL Server 5.7\Data", substituindo os arquivos locais.</li>
+				<li>Iniciar o serviço "MySQLxx"</li>
+				<li>Executar o arquivo "Conversao.bat" na pasta raiz;</li>
+				<ol>
+					<li>Informe um número para controle do atendimento;</li>
+				</ol>
+				<li>Na lista de conversores, informe a opção “DPComp”, e pressione “Enter”;</li>
+				<li>Informe a opção “1 - Gerar planilha de empresas”;</li>
+				<li>Informe a opção “N” para não realizar a restauração do banco de dados, pois o mesmo já se encontra restaurado manualmente;</li>
+				<li>Informe a opção “S” para realizar a extração dos dados DPComp (O conversor já está preparado para verificar se o banco dpcomp existe no caminho indicado anteriormente);</li>
+				<li>Na mensagem “Informe a senha do usuário cadastrada no MySQL”, informar a senha do usuário root do MySQL (por padrão, utilizamos a senha root, configurada durante a instalação do MySQL);</li>
+				<li>Na mensagem “Informe a porta que foi cadastrada no MySQL”, informar a porta configurada no MySQL Workbench, por padrão 3306 (imagem exemplo abaixo);</li>
+				<div><img src="..\..\images\2_conversores\dpcomp_001.png" class="w3-border w3-padding"></div>
+				<li>Aguarde até que o processo seja finalizado;</li>
+				<li>Após isso, avaliar a seção “Verificador” deste manual.</li>
+			</ol>
+		
+		<h4>Exclusão da base no MySQL</h4>
+			<p>Após a conversão definitiva (entrega do banco ao cliente), você pode excluir a base no MySQL para liberar espaço em sua máquina.</p>
+			<p>Para excluir a base no MySQL Workbench:</p>
+			<ol>
+				<li>Primeiramente, abrir o programa MySQL Workbench;</li>
+				<li>Clicar no botão “Local instance MySQL 5.7" (slide 1);</li>
+				<li>Informar a senha (por padrão ‘root’ sem aspas) (slide 2);</li>
+				<li>Clicar com o botão direito do mouse na database desejada e selecionar “Drop Schema” (slide 3);</li>
+				<li>Clicar na opção “Drop Now” e aguardar o processo finalizar (slide 4).</li>
+			</ol>
+			<!-- !SLIDESHOW MYSQL DELETE! -->
+			<style>
+			.sqlserverSlides {display:none;}
+			</style>
+
+			<div class="w3-content w3-display-container">
+
+			<div class="w3-display-container sqlserverSlides">
+			  <img src="..\..\images\2_conversores\mysql_drop_001.png" style="width:100%">
+			  <div class="w3-black">
+			  </div>
+			</div>
+
+			<div class="w3-display-container sqlserverSlides">
+			  <img src="..\..\images\2_conversores\mysql_drop_002.png" style="width:100%">
+			  <div class="w3-black">
+			  </div>
+			</div>
+
+			<div class="w3-display-container sqlserverSlides">
+			  <img src="..\..\images\2_conversores\mysql_drop_003.png" style="width:100%">
+			  <div class="w3-black">
+			  </div>
+			</div>
+
+			<div class="w3-display-container sqlserverSlides">
+			  <img src="..\..\images\2_conversores\mysql_drop_004.png" style="width:100%">
+			  <div class="w3-black">
+			  </div>
+			</div>
+
+
+			<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+			<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+
+			</div>
+
+			<script>
+			var slideIndex = 1;
+			showDivs(slideIndex);
+
+			function plusDivs(n) {
+			  showDivs(slideIndex += n);
+			}
+
+			function showDivs(n) {
+			  var i;
+			  var x = document.getElementsByClassName("sqlserverSlides");
+			  if (n > x.length) {slideIndex = 1}
+			  if (n < 1) {slideIndex = x.length}
+			  for (i = 0; i < x.length; i++) {
+				 x[i].style.display = "none";  
+			  }
+			  x[slideIndex-1].style.display = "block";  
+			}
+			</script>
+			<!-- !end SLIDESHOW MYSQL DELETE! -->

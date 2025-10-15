@@ -1,0 +1,14 @@
+col_codigo,1,4,integer,0
+natureza,271,1,char,0
+nivel,272,1,char,0
+atuacao,273,50,char,0
+numero_apolice_seguro,323,35,char,0
+instituicao_razao_social,377,80,char,0
+instituicao_logradouro,457,80,char,0
+instituicao_numero,537,10,char,0
+instituicao_bairro,547,30,char,0
+agente_nome,599,80,char,0
+agente_logradouro,669,80,char,0
+agente_numero,759,10,char,0
+agente_bairro,769,30,char,0
+supervisor_nome,821,80,char,0

@@ -1,0 +1,14 @@
+id,1,4,integer,0
+funcid,5,4,integer,0
+codigo,9,4,integer,0
+parentesco,13,2,integer,0
+datainicial,15,4,date,0
+convenio,23,1,integer,0
+teste1,24,1,integer,0
+ir,25,1,integer,0
+teste2,26,1,integer,0
+salfam,27,1,integer,0
+teste3,28,1,integer,0
+teste4,29,1,integer,0
+teste5,30,1,integer,0
+motivo,31,255,char,0

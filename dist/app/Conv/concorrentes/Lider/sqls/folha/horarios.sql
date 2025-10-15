@@ -1,0 +1,3 @@
+SELECT *
+FROM [Horários]
+ORDER BY 2,3

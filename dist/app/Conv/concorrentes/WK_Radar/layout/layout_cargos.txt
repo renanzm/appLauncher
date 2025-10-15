@@ -1,0 +1,1 @@
+"[Código]";"[Tipo]";"[Classificação]";"[Código CBO]";"[Tipo Acumulação]";"[Descrição]";"[Risco Ocupacional]";"[Atividades]";"[Início]";"[Observação]"

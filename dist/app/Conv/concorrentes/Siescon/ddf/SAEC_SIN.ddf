@@ -1,0 +1,15 @@
+sin_codigo,1,6,char,0
+sin_nome,13,200,char,0
+sin_nome_reduzido,213,40,char,0
+sin_tipo,253,1,char,0
+sin_mes_do_dissidio,254,2,integer,0
+sin_endereco,256,40,char,0
+sin_numero_endereco,296,5,char,0
+sin_complemento,301,10,char,0
+sin_bairro,311,30,char,0
+sin_cep,341,4,integer,0
+sin_municipio,345,30,char,0
+uf_estado,375,2,char,0
+sin_cnpj,397,8,double,0
+sin_agencia_na_cef,1471,10,char,0
+sin_ddd_e_telefone,1491,30,char,0

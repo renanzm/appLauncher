@@ -1,0 +1,16 @@
+sindicato,5,4,integer,0
+dia,9,2,integer,0
+mes,11,2,integer,0
+descricao,13,40,char,0
+char1,53,50,char,0
+char2,103,50,char,0
+char3,153,50,char,0
+float1,203,8,double,0
+float2,211,8,double,0
+float3,219,8,double,0
+int1,227,4,integer,0
+int2,231,4,integer,0
+int3,235,4,integer,0
+logical1,239,1,integer,0
+logical2,240,1,integer,0
+logical3,241,1,integer,0

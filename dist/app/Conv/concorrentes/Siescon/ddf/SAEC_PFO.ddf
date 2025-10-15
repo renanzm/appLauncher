@@ -1,0 +1,5 @@
+emp_codigo,1,4,integer,0
+emp_empresa_para_eve,86,4,integer,0
+pfo_uso_centro_custo,195,1,char,0
+pfo_uso_evento,306,1,char,0
+pfo_uso_horario,307,1,char,0

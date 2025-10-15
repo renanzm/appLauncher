@@ -1,0 +1,12 @@
+agenintgid,1,4,integer,0
+razaosocial,4,80,char,0
+cnpj,85,18,char,0
+tipolog,106,1,integer,0
+logradouro,108,80,char,0
+numero,188,10,char,0
+complemento,198,15,char,0
+bairro,213,30,char,0
+codmunicipio,243,7,char,0
+cidade,250,30,char,0
+uf,280,2,char,0
+cep,282,10,char,0

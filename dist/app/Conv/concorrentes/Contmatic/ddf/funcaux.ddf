@@ -1,0 +1,8 @@
+funcid,1,4,integer,0
+racacor,5,2,integer,0
+int1,7,2,integer,0
+int2,9,2,integer,0
+int3,11,4,integer,0
+int4,15,4,integer,0
+str1,35,20,char,0
+data1,75,4,date,0

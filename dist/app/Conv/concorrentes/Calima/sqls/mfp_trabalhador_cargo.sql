@@ -1,0 +1,1 @@
+SELECT * FROM public.mfp_trabalhador_cargo

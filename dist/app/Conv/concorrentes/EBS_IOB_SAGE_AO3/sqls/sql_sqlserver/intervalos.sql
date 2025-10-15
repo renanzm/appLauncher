@@ -1,0 +1,1 @@
+SELECT * FROM EBS_CORDILHEIRA.DBO.CRHJornadaTrabalhoIntervalo

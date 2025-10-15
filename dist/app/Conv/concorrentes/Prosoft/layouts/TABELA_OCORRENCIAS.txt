@@ -1,0 +1,3 @@
+GPSTABOCO
+Código da Ocorrência,24,3
+Código Oficial da GFIP,87,2

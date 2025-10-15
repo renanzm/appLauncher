@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Manual Conversores Novo Modelo</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../../css/w3.css">
+		<style>
+			body,h1,h2,h3,h4,h5 {font-family: "Verdana", sans-serif}
+			.w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
+			.w3-third img:hover{opacity: 1}
+		</style>
+		<style>
+			ol > li {
+			counter-increment: item;
+			}
+			ol > li:first-child {
+			counter-reset: item;
+			}
+			ol ol > li {
+			display: block;
+			}
+			ol ol > li:before {
+			content: counters(item, ".") ". ";
+			margin-left: -20px;
+			}
+		</style>
+	</head>
+	<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:50px">
+  <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+	<div class="w3-content" style="max-width:100%">
+		<h2 class="w3-center" id="INTRO"><b>Conta Azul</b></h2>
+		<br>
+		<h4><b>Base de dados concorrente</b></h4>
+			<p>Neste concorrente os dados são obtidos sem a necessidade da captação de base de dados em formato de arquivo, todas as requisições são feitas através da API desenvolvida exclusivamente para o processo de conversão dos dados do Conta Azul para o Domínio.</p>
+			<p>Para a conversão do conta azul serão necessárias apenas 2 informações, Token e CNPJ do contador.</p>
+			<p>Token: Para solicitar o Token deve ser aberto uma SS para a nossa equipe e o mesmo tem validade de 1 hora. O mesmo deve ser inserido na tela inicial do conversor</p>
+			<p>CNPJ: O escritório deve informar e o mesmo deve ser inserido na tela inicial do conversor.</p>
+
+		<h4><b>Programas necessários</b></h4>
+			<li>Strawberry Perl</li>
+			<li>Microsoft Excel, versão 97/2003 ou superior</li>
+			<li>Acesso à internet</li>
+			<li>Python 3.11 (64 bits)</li>
+			
+			<p>Com exceção do Microsoft Excel, todos os demais programas podem ser baixados no FTP:<br>/unidades/Pub/Conversores/[Conversor Thomson Reuters]/[ Instaladores ]</p>
+			
+		<h4><b>Treinamento</b></h4>
+			<p>O treinamento para este conversor ainda não está disponível</p>
+		<h4><b>Conversão</b></h4>
+			<ol>
+				<li>Executar o arquivo "Conversao.bat" na pasta raiz;
+					<ol>
+						<li>Informe um número para controle do atendimento;</li>
+					</ol>
+				</li>
+				<li>Na lista de conversores, informe a opção “Conta Azul”, e pressione “Enter”;</li>
+				<li>Informe a opção “1 - Gerar planilha de empresas”;</li>
+				<li>Ao iniciar o conversor será apresentada a seguinte mensagem;</li>
+				<div><img src="..\..\images\2_conversores\conta_azul_1.png" class="w3-border w3-padding"></div><br>
+				<li>Ao selecionar a opção Sim, o conversor solicitará o Token de acesso que foi fornecido via SS;</li><br>
+				<div><img src="..\..\images\2_conversores\conta_azul_2.png" class="w3-border w3-padding"></div><br>
+				<li>Basta colar o token copiado pressionando CTRL + V ou clicando com o botão direito do mouse na tela do CMD;</li><br>
+				<div><img src="..\..\images\2_conversores\conta_azul_3.png" class="w3-border w3-padding"></div><br>
+				<li>Após esta parte será solicitado o CNPJ da empresa, basta proceder conforme Token;</li><br>
+				<div><img src="..\..\images\2_conversores\conta_azul_4.png" class="w3-border w3-padding"></div><br>
+				<li>Durante a execução normal do conversor o mesmo apresenta mensagens como esta:;</li><br>
+				<div><img src="..\..\images\2_conversores\conta_azul_5.png" class="w3-border w3-padding"></div><br>
+				<li>Ai finalizar o conversor a seguinte tela é emitida:;</li><br>
+				<div><img src="..\..\images\2_conversores\conta_azul_6.png" class="w3-border w3-padding"></div><br>
+				<li>Em seguida, avaliar a seção “Verificador” deste manual.</li>
+
+			</ol>

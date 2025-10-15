@@ -1,12 +1,18 @@
-import sys, os, requests, zipfile
+import sys, os, requests, zipfile, subprocess
 from PyQt6.QtWidgets import QApplication, QMessageBox
 from launcher_ui import LauncherUI
 from pathlib import Path
+from PyQt6.QtCore import QTimer
 
-SERVER_VERSION_URL = "http://localhost:8000/version.json"
-LOCAL_APP_FOLDER = Path("app")
+if getattr(sys, 'frozen', False):
+    BASE_DIR = Path(os.path.dirname(sys.executable))
+else:
+    BASE_DIR = Path(__file__).resolve().parent
+
+# Corrige caminhos relativos
+LOCAL_APP_FOLDER = BASE_DIR / "app"
 LOCAL_VERSION_FILE = LOCAL_APP_FOLDER / "version.txt"
-
+SERVER_VERSION_URL = "http://localhost:8000/version.json"
 
 class LauncherApp(LauncherUI):
     def __init__(self):
@@ -17,6 +23,8 @@ class LauncherApp(LauncherUI):
         self.button_open.clicked.connect(self.open_app)
         self.local_version = self.read_local_version()
         self.set_open_button_active(False)
+
+        QTimer.singleShot(800, self.check_updates)
 
     def read_local_version(self):
         if LOCAL_VERSION_FILE.exists():
@@ -75,7 +83,17 @@ class LauncherApp(LauncherUI):
             QMessageBox.warning(self, "Erro", str(e))
 
     def open_app(self):
-        QMessageBox.information(self, "Abrir", "Aplicativo iniciado (exemplo).")
+        app_path = LOCAL_APP_FOLDER / "start.exe"
+
+        if not app_path.exists():
+            QMessageBox.warning(self, "Erro", f"Arquivo não encontrado: {app_path}")
+            return
+
+        try:
+            subprocess.Popen([str(app_path)], cwd=LOCAL_APP_FOLDER)
+            self.close()
+        except Exception as e:
+            QMessageBox.warning(self, "Erro", f"Não foi possível iniciar o aplicativo:\n{e}")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,1 @@
+SELECT '{codi_emp}' AS CODI_EMP, * FROM SA6{empresa}

@@ -1,0 +1,7 @@
+SELECT EMP_CODIGO,
+       SPE_EPG_CODIGO,
+       SPE_DATA,
+       DEP_SEQ,
+       PSO_CODIGO
+  FROM PSD
+ORDER BY 1, 2, 3

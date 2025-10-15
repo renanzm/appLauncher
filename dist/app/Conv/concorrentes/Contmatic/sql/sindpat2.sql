@@ -1,0 +1,1 @@
+select * from public.sindpat2 order by 1, 2;

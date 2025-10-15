@@ -1,0 +1,1 @@
+select * from CRDEmpresaQuadroSocio order by 1,2

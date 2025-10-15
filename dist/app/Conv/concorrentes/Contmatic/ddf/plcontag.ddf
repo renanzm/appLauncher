@@ -1,0 +1,7 @@
+plano,1,4,integer,0
+conta,5,56,char,0
+descricao,61,40,char,0
+reduzida,101,4,integer,0
+identificar,105,2,integer,0
+naturezadc,129,1,char,0
+natureza,130,2,integer,0

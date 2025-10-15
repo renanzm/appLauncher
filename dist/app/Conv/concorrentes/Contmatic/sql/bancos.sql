@@ -1,0 +1,1 @@
+select * from public.bancos order by 1, 2;

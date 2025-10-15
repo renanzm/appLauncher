@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Manual Conversores Novo Modelo</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../../css/w3.css">
+		<style>
+			body,h1,h2,h3,h4,h5 {font-family: "Verdana", sans-serif}
+			.w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
+			.w3-third img:hover{opacity: 1}
+		</style>
+		<style>
+			ol > li {
+			counter-increment: item;
+			}
+			ol > li:first-child {
+			counter-reset: item;
+			}
+			ol ol > li {
+			display: block;
+			}
+			ol ol > li:before {
+			content: counters(item, ".") ". ";
+			margin-left: -20px;
+			}
+		</style>
+	</head>
+	<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:50px">
+  <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+	<div class="w3-content" style="max-width:100%">
+		<h2 class="w3-center" id="INTRO"><b>LG FPW</b></h2>
+		<br>
+		
+		<h4><b>Base de dados concorrente</b></h4>
+			<p>O backup do concorrente deve estar no formato ".BAK" (solicitar ao cliente um backup).</p>
+			
+		<h4><b>Programas necessários</b></h4>
+			<li>Microsoft Excel, versão 97/2003 ou superior</li>
+			<li>Acesso à internet</li>
+			<li>Python 3.11 (64 bits)</li>
+			<div class="w3-panel w3-pale-red w3-border">
+				<span>&#9888; <b>IMPORTANTE:</b> É necessário que a máquina tenha acesso à internet, pois o Python faz o download de algumas bibliotecas na primeira vez em que é utilizado. A versão 3.9.5 do Python funciona somente no Windows 10 ou posterior.
+			</div>
+			<li>Microsoft SQL Server 2019 Developer e o Microsoft SQL Tools 2018.</li>
+			
+			<p>Com exceção do Microsoft Excel, todos os demais programas podem ser baixados no FTP:<br>/unidades/Pub/Conversores/[Conversor Thomson Reuters]/[Instaladores]</p>
+			
+		<h4><b>Treinamento</b></h4>
+			<p>O treinamento para esse conversor ainda não está disponível.</p>
+		
+		<h4><b>Conversão</b></h4>
+			<ol>
+				<li>Acessar a pasta " Dados_Concorrente" na raiz do conversor;</li>
+				<ol>
+					<li>Colar o arquivo de backup do concorrente nessa pasta (arquivo ".BAK");</li>
+				</ol>
+				<li>Executar o arquivo "Conversao.bat" na pasta raiz;</li>
+				<ol>
+					<li>Informe um número para controle do atendimento;</li>
+				</ol>
+				<li>Na lista de conversores, informe a opção “LG FPW”, e pressione “Enter”;</li>
+				<li>Informe a opção “1 - Gerar planilha de empresas”;</li>
+				<li>Informe a opção “1” para exportar os dados (caso já tenha exportado, informe “2”);</li>
+				<ol>
+					<li>Caso a conexão automática com o SQL Server falhe, será solicitado informar manualmente o nome do servidor;</li>
+						<li>Para identificar o nome do servidor você deve abrir o "Microsoft SQL Server Management Studio 18", instalado na máquina.
+							Ao abrir o Management Studio, avaliar o campo "Nome do servidor" (geralmente é o nome da máquina) e insira na tela do conversor.
+							<br/>
+							<div><img src="..\..\images\2_conversores\alterdata_004.png" class="w3-border w3-padding"></div>
+							<br/>
+						</li>
+					</ol>
+				<li>Informe a opção “1” para restaurar o banco de dados (caso já tenha restaurado, informe “2”), o processo de restauração pode ser demorado caso o banco seja muito grande. Caso já exista um banco para essa conversão, será apresentado uma mensagem questionando se deseja substitui-lo;</li>
+				<li>Aguarde até que o processo seja finalizado;</li>
+				<li>Após isso, avaliar a seção “Verificador” deste manual.</li>
+			</ol>
+		<br>
+		<h4><b>Exclusão da base no SQL Server</b></h4>
+		<p>Após a extração dos dados, poderá realizar a exclusão da base do SQL Server. </p>
+		<p>Para excluir a base no SQL Server:</p>
+		<ol>
+			<li>No "Microsoft SQL Server Management Studio 18", acessar o menu lateral esquerdo, clicando no sinal de “+” da pasta “Databases”;</li>
+			<li>Clicar com o botão direito do mouse na base “LG_+ número de controle informado no item 2.1” e selecionar a opção “Delete”;</li>
+			<li>Na tela “Delete Object”, marcar as opções conforme imagem abaixo e clicar em OK;</li>
+			<li>Aguarde até que o processo seja finalizado.</li>
+			<div><img src="..\..\images\2_conversores\protheus_sqlserver_drop_database_1.png" class="w3-border w3-padding"></div>
+		</ol>

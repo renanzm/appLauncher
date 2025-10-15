@@ -1,0 +1,11 @@
+SELECT a.CD_BANCO,
+       a.CD_AGENCIA,
+       a.NR_CHECKDIGITO,
+       b.DS_BANCO,
+       a.DS_AGENCIA,
+       a.DS_ENDERECO
+  FROM AGENCIA a
+  LEFT JOIN BANCO b
+  ON a.CD_BANCO = b.CD_BANCO
+ ORDER BY a.CD_BANCO,
+          a.CD_AGENCIA;

@@ -1,0 +1,3 @@
+SELECT *
+FROM Empresas
+ORDER BY 2

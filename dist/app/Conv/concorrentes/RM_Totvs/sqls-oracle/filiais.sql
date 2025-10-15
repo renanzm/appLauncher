@@ -1,0 +1,21 @@
+SELECT CODCOLIGADA,
+       CODFILIAL,
+       NOME,
+       CGC,
+       INSCRICAOESTADUAL,
+       TELEFONE,
+       FAX,
+       EMAIL,
+       RUA,
+       NUMERO,
+       COMPLEMENTO,
+       BAIRRO,
+       CIDADE,
+       ESTADO,
+       CODMUNICIPIO,
+       CEP,
+       INSCMUN,
+       RAMOATIVIDADE,
+       CODATIVIDPRINC
+FROM GFILIAL
+ORDER BY CODCOLIGADA, CODFILIAL;

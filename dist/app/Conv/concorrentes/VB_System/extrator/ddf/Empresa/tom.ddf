@@ -1,0 +1,12 @@
+codigo,1,3
+nome,4,40
+endereco,44,50
+cidade,94,20
+bairro,114,20
+cep,134,8
+estado,142,2
+tipo_insc,144,1
+inscricao,145,14
+gps,159,4
+desprezar,163,182
+tipo,352,1

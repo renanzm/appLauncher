@@ -1,0 +1,3 @@
+coordieid,1,4,integer,0
+nome,9,80,char,0
+cpf,89,18,char,0

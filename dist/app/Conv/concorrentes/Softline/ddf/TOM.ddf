@@ -1,0 +1,20 @@
+codigo	1	5
+descricao	6	40
+endereco	46	50
+bairro	96	30
+cidade	126	6
+cep	132	8
+ddd	140	4
+telefone	144	15
+tipo_doc	159	1
+documento	160	14
+codigo_gps	174	5
+tomador	179	1
+codigo_sat	180	7
+perc_sat	187	7	4
+agrupar	194	1
+obra_propria	195	1
+codigo_terc	196	5
+perc_terc	201	7	4
+codigo_fpas	208	3
+tipo_lotacao	211	2

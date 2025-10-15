@@ -1,0 +1,1 @@
+select * from public.autonomo order by 1, 2;

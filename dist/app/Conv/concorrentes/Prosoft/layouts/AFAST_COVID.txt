@@ -1,0 +1,3 @@
+GPSFUNC04COMPL
+Número Sequencial,24,12
+Redução de Jornada,344,2

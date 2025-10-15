@@ -1,0 +1,15 @@
+localid,1,2,integer,0
+descricao,3,40,char,0
+endereco,43,40,char,0
+numlocal,83,4,integer,0
+compl,87,20,char,0
+bairro,107,30,char,0
+cidade,137,30,char,0
+uf,167,2,char,0
+cep,169,9,char,0
+codfpas,178,4,integer,0
+codfpas3,182,4,integer,0
+regimepagto,186,2,integer,0
+cgc,188,18,char,0
+numcei,206,18,char,0
+codatvsat,224,8,double,3

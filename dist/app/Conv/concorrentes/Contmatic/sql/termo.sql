@@ -1,0 +1,1 @@
+select * from public.termo order by 1, 2;

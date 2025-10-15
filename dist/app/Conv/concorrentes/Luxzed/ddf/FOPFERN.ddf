@@ -1,0 +1,5 @@
+FOPFERN.ARQ	178
+codigo	1	5	char
+ini_aquisitivo	7	6	date	yymmdd
+situacao	14	1	char
+competencia	105	4	date	yymm

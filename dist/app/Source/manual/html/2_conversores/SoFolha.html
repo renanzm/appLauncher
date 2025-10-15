@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Manual Conversores Novo Modelo</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../../css/w3.css">
+		<style>
+			body,h1,h2,h3,h4,h5 {font-family: "Verdana", sans-serif}
+			.w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
+			.w3-third img:hover{opacity: 1}
+		</style>
+		<style>
+			ol > li {
+			counter-increment: item;
+			}
+			ol > li:first-child {
+			counter-reset: item;
+			}
+			ol ol > li {
+			display: block;
+			}
+			ol ol > li:before {
+			content: counters(item, ".") ". ";
+			margin-left: -20px;
+			}
+		</style>
+	</head>
+	<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:50px">
+  <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+	<div class="w3-content" style="max-width:100%">
+		<h2 class="w3-center" id="INTRO"><b>SoFolha</b></h2>
+		<br>
+		<h4><b>Base de dados concorrente</b></h4>
+			<p>O banco de dados do concorrente deve estar no formato ".FDB" ou ".GDB" ou em formato de <b>backup</b> ".FBK" ou ".GBK".</p>
+
+			
+		<h4><b>Programas necessários</b></h4>
+			<li>Microsoft Excel, versão 97/2003 ou superior</li>
+			<li>Acesso à internet</li>
+			<li>Python 3.11 (64 bits)</li>
+				<div class="w3-panel w3-pale-red w3-border">
+				<span>&#9888; <b>IMPORTANTE:</b> É necessário que a máquina tenha acesso à internet, pois o Python faz o download de algumas bibliotecas na primeira vez em que é utilizado. A versão 3.9.5 do Python funciona somente no Windows 10 ou posterior.
+				</div>
+			<li> <a href="../13_firebird/firebird.html">Firebird </a> </li>
+			
+			<p>Com exceção do Microsoft Excel, todos os demais programas podem ser baixados no FTP:<br>/unidades/Pub/Conversores/[Conversor Thomson Reuters]/[Instaladores]</p>
+			
+		<h4><b>Treinamento</b></h4>
+			<p>O treinamento está disponível no FTP:<br>/unidades/Pub/Conversores/[Conversor Thomson Reuters]/[ Treinamentos ]</p>
+		<h4><b>Conversão</b></h4>
+			<ol>
+				<li>Alocar o arquivo de backup do concorrente dentro da pasta "Dados_Concorrente";</li>
+				<li>Executar o arquivo "Conversao.bat" na pasta raiz;</li>
+				<ol>
+					<li>Informe um número para controle do atendimento;</li>
+				</ol>
+				<li>Na lista de conversores, informe a opção “SoFolha”, e pressione “Enter”;</li>
+				<li>Informe a opção “1 - Gerar planilha de empresas”;</li>
+				<li>Aguarde até que o processo seja finalizado;</li>
+				<li>Após isso, avaliar a seção “Verificador” deste manual.</li>
+			</ol>

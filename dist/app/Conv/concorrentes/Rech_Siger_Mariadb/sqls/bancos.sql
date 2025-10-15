@@ -1,0 +1,3 @@
+SELECT *
+FROM PTGPFP_BCX
+ORDER BY ptgp_cbcx

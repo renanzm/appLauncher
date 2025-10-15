@@ -1,0 +1,6 @@
+convevehid,1,4,integer,0
+convevenid,5,4,integer,0
+datainicio,9,4,date,0
+datafim,13,4,date,0
+valorconvenio,17,8,double,0
+valorparcdescontar,25,8,double,0

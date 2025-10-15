@@ -1,0 +1,30 @@
+FOPFFUN.DAT	300
+codigo	1	5	char
+nome_complemento	7	20	char
+identidade	28	11	char
+org_identidade	40	5	char
+uf_identidade	46	2	char
+dt_exp_identidade	49	6	date	ddmmyy
+titulo_eleitor	56	14	char
+zona_eleit	71	4	char
+secao_eleit	76	4	char
+cart_motorista	81	11	char
+categ_motorista	93	1	char
+data_pis	94	6	date	ddmmyy
+local_nasc	101	20	char
+nome_pai	122	30	char
+dt_exp_ctps	153	6	date	ddmmyy
+ult_exame_medico	160	6	date	ddmmyy
+termino_contrato	167	6	date	ddmmyy
+prorr_contrato	174	6	date	ddmmyy
+adm_fgts	181	1	char
+obs_1	182	20	char
+obs_2	203	25	char
+oco_sefip	236	1	char
+contrib_sind	237	1	char
+contrib_fede	238	1	char
+contrib_outras	239	1	char
+cbo_2002	255	8	char
+ddd	262	1	int
+uf_nasc	264	3	char
+ctps_fim	280	1	char

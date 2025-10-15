@@ -1,0 +1,12 @@
+SELECT CODFUNC,
+       SEQUENCIA,
+       INICIO,
+       CODESTAB,
+       CODDEPTO,
+       CODSETOR,
+       CODSECAO,
+       CODFUNCAO,
+       ATIVIDADES
+  FROM DATABASE.histfuncao
+ ORDER BY CODFUNC,
+          INICIO;

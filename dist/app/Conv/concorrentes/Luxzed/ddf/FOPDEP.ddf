@@ -1,0 +1,8 @@
+FOPDEP.ARQ	57
+codigo	1	5	char
+tipo	7	2	char
+nome	10	30	char
+data_nascimento	41	30	date	ddmmyy
+sal_familia	49	1	char
+abate_irrf	51	1	char
+cota_especial	53	1	char

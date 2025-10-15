@@ -1,0 +1,110 @@
+{
+    "tipo_inscricao": {
+        "": 1,
+        "CNPJ": 1,
+        "CPF": 2,
+        "CEI": 3
+    },
+    "dia_semana": {
+        "": 8,
+        "1": 8,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7
+    },
+    "dia_semana_nome": {
+        "": "Domingo",
+        "1": "Domingo",
+        "2": "Segunda",
+        "3": "Terça",
+        "4": "Quarta",
+        "5": "Quinta",
+        "6": "Sexta",
+        "7": "Sábado"
+    },
+    "cor2": {
+        "Indigena": 0,
+        "Branca": 2,
+        "Preta": 4,
+        "Amarela": 6,
+        "Parda": 8,
+        "Não informado": 9
+    },
+    "estado_civil": {
+        "": "S",
+        "SOLTEIRO": "S",
+        "SOLTEIRA": "S",
+        "Casada": "C",
+        "CASADA": "C",
+        "Divorciada": "D",
+        "Divorciado": "D",
+        "SEPARADO": "S",
+        "Solteiro": "S",
+        "Solteira": "S"
+    },
+    "grau_instrucao": {
+        "Analfabeto": "1",
+        "Ensino Fundamental inCompleto": "2",
+        "Ensino Fundamental Completo": "5",
+        "Ensino Médio Incompleto": "6",
+        "Ensino Médio Completo": "7",
+        "Educação superior incompleta": "8",
+        "Educação superior completa": "9",
+        "Mestrado": "10",
+        "Doutorado": "11",
+        "Ph. D": "12",
+        "Pós-Graduação": "13"
+    },
+    "sexo": {
+        "Masculino": "S",
+        "Feminino": "S",
+        "": "M"
+    },
+    "tipo_vinculo": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "21": 50
+    },
+    "cor": {
+        "0": 2,
+        "1": 4,
+        "2": 6,
+        "3": 8,
+        "4": 0,
+        "5": 9
+    },
+    "afastamento": {
+        "1": 3,
+        "2": 3,
+        "3": 6,
+        "4": 6,
+        "5": 5,
+        "16": 24,
+        "18": 32
+    },
+    "tipo_rubrica": {
+        "0": "V",
+        "1": "H",
+        "2": "V",
+        "3": "V",
+        "4": "V",
+        "5": "V",
+        "6": "V",
+        "7": "H",
+        "8": "V",
+        "9": "V",
+        "10": "V",
+        "11": "V",
+        "12": "V",
+        "13": "V"
+    }
+}

@@ -1,0 +1,8 @@
+SELECT EMP_CODIGO,
+       CODIGO,
+       NOME,
+       REDUZIDO,
+       ANALITICA,
+       NATUREZA
+FROM CON
+ORDER BY 1,2

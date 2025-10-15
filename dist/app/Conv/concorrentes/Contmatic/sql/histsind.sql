@@ -1,0 +1,1 @@
+select * from public.histsind order by 1, 2;

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Manual Conversores Novo Modelo</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../../css/w3.css">
+		<style>
+			body,h1,h2,h3,h4,h5 {font-family: "Verdana", sans-serif}
+			.w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
+			.w3-third img:hover{opacity: 1}
+		</style>
+		<style>
+			ol > li {
+			counter-increment: item;
+			}
+			ol > li:first-child {
+			counter-reset: item;
+			}
+			ol ol > li {
+			display: block;
+			}
+			ol ol > li:before {
+			content: counters(item, ".") ". ";
+			margin-left: -20px;
+			}
+		</style>
+	</head>
+	<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:50px">
+  <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+	<div class="w3-content" style="max-width:100%">
+		<h2 class="w3-center" id="INTRO"><b>Cuca Fresca</b></h2>
+		<br>
+		<h4><b>Base de dados concorrente</b></h4>
+			<p>Para essa conversão, será necessário o arquivo de backup, podendo ser:<br>
+			Arquivo de backup na extensão <b>".backup"</b> realizado pelo PostgreSQL(pgAdmin).<br>
+			Ou o arquivo de backup realizado pelo próprio sistema Cuca Fresca, com extensão <b>".cf7"</b>.
+			<p>Nesse caso será necessário, o mesmo realizado pela tela de inicialização do sistema, ao clicar no ícone indicado na imagem abaixo.</p>
+			<div><img src="..\..\images\2_conversores\cuca_fresca_001.jpg" class="w3-border w3-padding"></div>
+		<br>
+		<h4><b>Programas necessários</b></h4>
+			<li>Microsoft Excel, versão 97/2003 ou superior</li>
+			<li>Acesso à Internet</li>
+			<li>Python 3.11 (64 bits)</li>
+			<li>PostgreSQL 17.2</li>
+				<div class="w3-panel w3-pale-red w3-border">
+				<span>&#9888; <b>IMPORTANTE:</b> Após instalar o PostgreSQL, acessar a variável Path do Windows e confirmar se foi adicionado o caminho da pasta “bin” do Postgre. Caso não, deve-se adicionar manualmente, pois o Conversor faz a chamada do executável pela Path do Windows.</span>
+				</div>
+			<p>Com exceção do Microsoft Excel, todos os demais programas podem ser baixados no FTP:<br>/unidades/Pub/Conversores/[Conversor Thomson Reuters]/[ Instaladores ]</p>
+		<br>
+		<h4><b>Treinamento</b></h4>
+			<p>O treinamento está disponível no FTP:<br>/unidades/Pub/Conversores/[Conversor Thomson Reuters]/[ Treinamentos ]</p>
+		<br>
+		<h4><b>Conversão</b></h4>
+			<ol>
+
+				<li>Alocar o backup do sistema concorrente dentro da pasta "Dados_Concorrente";</li>
+				<li>Executar o arquivo "Conversao.bat" na pasta raiz;</li>
+				<li>Informe um número para controle do atendimento;</li>
+				<li>Na lista de conversores, informe a opção “Cuca Fresca”, e pressione “Enter”;</li>
+				<li>Informe a opção “1 - Gerar planilha de empresas”;</li>
+				<li>Informe a opção “S” para exportar os dados (caso já tenha exportado, informe “N”);</li>
+				<li>Informe a porta cadastrada no pgAdmin, conforme a imagem abaixo:</li>
+					<div><img src="..\..\images\2_conversores\cuca_fresca_002.png" class="w3-border w3-padding"></div>
+				<br>
+				<li>Informe a opção “S” para descompactar e restaurar o backup;</li>
+				<li>Se não houver uma base de nome “dpcuca” no pgAdmin, o processo continuará normalmente;</li>
+				<li>Caso exista a base “dpcuca”, o conversor apresentará uma mensagem indicando que a base já existe e se você deseja apagar esta base e restaurar o backup da conversão atual. Informe a opção “S” para que seja restaurado o backup da conversão atual;</li>
+					<div><img src="..\..\images\2_conversores\cuca_fresca_003.png" class="w3-border w3-padding"></div>
+				<br>
+				<li>Aguarde a finalização do processo, podendo levar vários minutos dependendo do tamanho do backup e da máquina utilizada;</li>
+				<li>Após isso, avaliar a seção “Verificador” deste manual.</li>
+
+			</ol>
+			<br>
+		<h4><b>Exclusão da base no pgAdmin III</b></h4>
+			<p>Após a conversão definitiva (entrega do banco ao cliente), você pode excluir a base no pgAdmin para liberar espaço em sua máquina, seguindo os passos abaixo:</p>
+			<ol>
+				<li>Primeiramente, abrir o programa pgAdmin;</li>
+				<li>Clicar no sinal de “>” em “Databases” para expandir as bases existentes;</li>
+				<li>Clicar com o botão direito do mouse na database desejada e selecionar “Delete/Drop...”;</li>
+				<li>Clicar em “Sim” na tela de confirmação e aguardar o processo finalizar.</li>
+			</ol>
+			<div><img src="..\..\images\2_conversores\cuca_fresca_003.png" class="w3-border w3-padding"></div>
+	</div>
+  </div>
+<!-- End page content -->
+</div>

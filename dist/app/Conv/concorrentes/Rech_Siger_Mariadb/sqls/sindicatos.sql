@@ -1,0 +1,3 @@
+SELECT *
+FROM PTGPFP_SIN
+ORDER BY ptgp_csin

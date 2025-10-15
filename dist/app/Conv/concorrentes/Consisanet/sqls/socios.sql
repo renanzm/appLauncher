@@ -1,0 +1,35 @@
+SELECT soc.CD_SOCIOGER,
+       soc.NM_SOCIOGER,
+       soc.NR_CIC,
+       soc.NR_CEP,
+       soc.DS_ENDERECO,
+       soc.NR_ENDERECO,
+       soc.DS_COMPLEMENTO,
+       soc.DS_BAIRRO,
+       (SELECT CD_MUNICIPIOIBGE
+          FROM MUNICIPIO
+         WHERE MUNICIPIO.CD_MUNICIPIO = soc.CD_MUNICIPIO) AS MUNICIPIO_IBGE,
+       (SELECT DS_MUNICIPIO
+          FROM MUNICIPIO
+         WHERE MUNICIPIO.CD_MUNICIPIO = soc.CD_MUNICIPIO) AS MUNICIPIO,
+       (SELECT SG_ESTADO
+          FROM ESTADO
+         WHERE ESTADO.CD_ESTADO = (SELECT CD_ESTADO
+                                     FROM MUNICIPIO
+                                    WHERE MUNICIPIO.CD_MUNICIPIO = soc.CD_MUNICIPIO)) AS ESTADO,
+       soc.NR_TELEFONE,
+       soc.DS_FUNCAO,
+       soc.DT_NASCIMENTO,
+       soc.NR_RG,
+       soc.SG_ORGAOEXPRG,
+       soc.DT_EXPRG,
+       soc.TP_SEXO,
+       soc.CD_RACACOR,
+       soc.CD_GRAUINST,
+       soc.CD_ESTADOCIVIL,
+       (SELECT CD_MUNICIPIOIBGE
+          FROM MUNICIPIO
+         WHERE MUNICIPIO.CD_MUNICIPIO = soc.CD_MUNICIPIONASCIMENTO) AS MUNICIPIO_NASCIMENTO_IBGE,
+       soc.DS_EMAIL
+  FROM SOCIOGERENTE soc
+ ORDER BY soc.CD_SOCIOGER

@@ -1,0 +1,6 @@
+codigo_empregado, 2, 6, int
+data_alteracao, 10, 14, date
+salario, 14, 22, decimal
+tipo_salario, 22, 23, int
+percentual, 23, 27, float
+descricao, 27, 48, string

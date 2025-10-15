@@ -1,0 +1,1 @@
+SELECT '{codi_emp}' AS CODI_EMP, * FROM SPJ{empresa}

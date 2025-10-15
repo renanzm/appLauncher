@@ -1,0 +1,57 @@
+SELECT empresa,
+	   razaosocial, 
+	   nomefantasia, 
+	   tipopessoa, 
+       cnpj, 
+	   inscrest, 
+	   inscrmun, 
+	   tipologradouro, 
+	   logradouro, 
+       numero, 
+	   complemento, 
+	   bairro, 
+	   (SELECT municipios.nome
+		FROM municipios
+		WHERE municipios.municipio = empresas.municipio) AS municipio,
+	   (SELECT municipios.estado
+		FROM municipios
+		WHERE municipios.municipio = empresas.municipio) AS estado,
+	   cep, 
+	   ddd, 
+	   telefone, 
+       fax, 
+	   homepage, 
+	   email, 
+	   nometitular, 
+	   cpftitular, 
+	   rgtitular, 
+	   numregistro, 
+       dataregistro, 
+	   tiporegistro, 
+	   cei, 
+	   cnae, 
+	   dataabreestado, 
+	   dataabrereceita, 
+	   dataabreprefeitura, 
+       tipocontabil, 
+	   codigocpr, 
+	   capitalsocial, 
+	   naturezajuridica, 
+	   sindicato, 
+	   escritorioatual, 
+	   dddescriatual, 
+	   foneescriatual, 
+       inicioescritorio, 
+	   saidaescritorio, 
+	   capitalatual, 
+       capitaloriginal, 
+	   estabelecimento, 
+	   iniciocaixa, 
+	   contato, 
+	   sindicatopatronal, 
+       socios
+  FROM empresas
+  WHERE empresas.exercicio = (SELECT MAX(emp2.exercicio)
+			                  FROM empresas AS emp2
+			                  WHERE emp2.empresa = empresas.empresa)
+ORDER BY empresa

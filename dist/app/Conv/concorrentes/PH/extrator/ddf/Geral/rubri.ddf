@@ -1,0 +1,3 @@
+codigo_rubrica, 2, 4, int
+descricao, 6, 47, string
+tipo_rais, 60, 61, int

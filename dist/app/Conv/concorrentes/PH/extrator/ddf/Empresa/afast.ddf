@@ -1,0 +1,4 @@
+codigo_empregado, 2, 6, int
+data_afastamento, 10, 14, date
+data_retorno, 14, 18, date
+tipo_afastamento, 18, 19, int

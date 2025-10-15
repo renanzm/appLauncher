@@ -1,0 +1,5 @@
+id,1,4,integer,0
+codigo,5,4,integer,0
+arquivoxml,33,70,char,0
+nrorecibo,447,30,char,0
+codigoaux,487,10,char,0

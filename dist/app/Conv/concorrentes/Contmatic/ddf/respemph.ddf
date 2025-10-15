@@ -1,0 +1,5 @@
+idrespemph,1,4,integer,0
+idrespemp,5,4,integer,0
+tipo,9,2,integer,0
+dthistorico,11,4,date,0
+valor,19,8,double,2

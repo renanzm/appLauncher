@@ -1,0 +1,25 @@
+AUTONOMOS
+Código Empresa,24,4
+Código Autônomo,28,4
+Nome do autônomo,46,60
+Logradouro,108,10
+Nome do logradouro,118,60
+Número,178,10
+Complemento,188,20
+Bairro,208,30
+Cidade,238,30
+Estado,268,2
+Cep,270,9
+Telefone - DDD,279,5
+Telefone - Número,284,10
+E-Mail,294,50
+Data do nascimento,344,8
+RG - Número,370,18
+RG - Orgão emissor,388,5
+RG - Data emissão,393,8
+RG - Estado emissor,401,2
+CPF,403,11
+Data de Cadastramento,508,8
+Data de Afastamento,516,8
+Depósito - Conta Conrrente,1626,20
+Depósito - Díg.Verif.C/Corrente,1646,2

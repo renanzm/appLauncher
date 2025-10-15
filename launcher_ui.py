@@ -9,7 +9,7 @@ from PyQt6.QtCore import Qt, QPropertyAnimation, QEasingCurve, QVariantAnimation
 class LauncherUI(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Launcher Conversor Thomson Reuters")
+        self.setWindowTitle("Inicializador Thomson Reuters ETL")
         self.setFixedSize(480, 360)
         self._mouse_drag_pos = None
 
@@ -29,7 +29,7 @@ class LauncherUI(QWidget):
         upper_bar.setContentsMargins(12, 0, 12, 0)
 
         # Título
-        title = QLabel("Launcher Conversor Thomson Reuters")
+        title = QLabel("Inicializador Thomson Reuters ETL")
         title.setStyleSheet("font-family: Calibri; color: white; font-size: 18px;")
         upper_bar.addWidget(title)
         upper_bar.addStretch()

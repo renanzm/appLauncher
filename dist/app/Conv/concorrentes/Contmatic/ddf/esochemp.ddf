@@ -1,0 +1,3 @@
+codigo,1,4,integer,0
+apelido,5,8,char,0
+nrorecibo,455,30,char,0

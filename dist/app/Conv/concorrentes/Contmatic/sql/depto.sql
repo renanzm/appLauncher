@@ -1,0 +1,1 @@
+select * from public.depto order by 1, 2;

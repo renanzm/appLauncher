@@ -1,0 +1,108 @@
+﻿<!doctype html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>Conversão de Médias</title>
+	<style TYPE="text/css">
+	<!--
+		body { margin: 25px; }
+		table { font-style: normal; font-weight: normal; font-family: Tahoma,Arial,sans-serif; font-size: 9pt; text-decoration: none; cursor: default; margin-top: 5px; margin-bottom: 5px; }
+		td { padding-left: 5px; padding-right: 5px; }
+		.linha0 { background-color: #CCCCCC; }
+		.linha1 { background-color: #FFFFFF; }
+		.linha2 { background-color: #E6E6E6; }
+		a { font-style: normal; font-weight: normal; font-family: Tahoma,Arial,sans-serif; font-size: 9pt; text-decoration: none; color: #000000; }
+		a:hover { font-style: normal; font-weight: normal; font-family: Tahoma,Arial,sans-serif; text-decoration: none; color: #000000; background: #DADADA; }
+		a:visited { font-style: normal; font-weight: normal; font-family: Tahoma,Arial,sans-serif; color: #000000; }
+		h1 { font-style: normal; font-weight: normal; font-family: Tahoma,Arial,sans-serif; font-size: 14pt; text-align: center; }
+		h2 { font-style: normal; font-weight: bold; font-family: Tahoma,Arial,sans-serif; font-size: 12pt; }
+		h3 { font-style: normal; font-weight: bold; font-family: Tahoma,Arial,sans-serif; font-size: 10pt; }
+		p { font-family: Tahoma,Arial,sans-serif; font-style: normal; font-weight: normal; font-size: 9pt; margin-bottom: 2px; margin-top: 2px; margin-left: 0px; margin-right: 0px; }
+		li { font-family: Tahoma,Arial,sans-serif; font-style: normal; font-weight: normal; font-size: 9pt; margin-bottom: 2px; margin-top: 2px; margin-left: 0px; margin-right: 0px; }
+		.firstHeader { width: 100%; height: 16px; font-family: Arial, Helvetica, sans-serif;font-size: 11px;color: #FFFFFF;background-color: #000000; }
+		.secondHeader { width: 100%; height: 6px; background-color: #DADADA; }
+		tr:hover { background-color: Silver; color: Black; }
+	-->
+	</style>
+</head>
+<body>
+<h1>Conversão de Médias</h1>
+
+<h2>Índice</h2>
+<ul>
+<li><a href="#passo1" title="Introdução">Introdução</a></li>
+<li><a href="#passo2" title="Passos para execução">Passos para execução</a></li>
+<li><a href="#passo3" title="Relatórios concorrentes">Relatórios utilizados para conferência</a></li>
+</ul>
+
+<!-- Introdução -->
+<a name="passo1"></a><h2>Introdução</h2>
+<p>O manual irá explanar as dúvidas sobre a conversão de médias.</p>
+<hr>
+
+<!-- Passos para execução -->
+<a name="passo2"></a><h2>Passos para execução</h2>
+<p><b>Importante:</b> Leia primeiramente todas as instruções abaixo antes de iniciar o processo.</p>
+
+<ol>
+        <li>Preencha a planilha de empresas com "S" ou "N";</li>
+        <li>Execute a aplicação "gerar_medias" e aguarde o término do processo;</li>
+        <li>
+            Relacione os eventos do concorrente com eventos <b>JÁ CADASTRADOS</b> no sistema Domínio;
+            <ol>
+                <li>Para conversão de médias através do conversor XML Esocial deverá ser preenchida na planilha de rubricas a unidade da rubrica uma vez que o esocial não armazena tal informação em sua base.</li>
+                <li>Selecionar na coluna "Considerar" com "VALOR" para rubricas do tipo Valor ou "REFERENCIA" para rubricas do tipo (Horas, Dias, ...) onde são condideradas as referencias para o calculo.</li>
+            </ol>
+        </li>
+        <li><b>Importante:</b> Esse processo deve ser realizado com atenção.</li>
+        <li>Execute a aplicação "gerar_medias" e aguarde o término do processo;</li>
+        <li>Caso deseje atualizar a planilha de relacionamento de rubricas, realize o procedimento e repita os dois passos anteriores;</li>
+        <li>Acesse o sistema Domínio e execute o SQL "layout_medias.sql";</li>
+        <li>Acesse a tela de importação de tabelas e selecione o Layout "Layout Médias";</li>
+        <li>Informe o caminho da pasta de médias e realize a importação;</li>
+    </ol>
+
+<!-- Relatorios -->
+<a name="passo3"></a><h2>Relatórios utilizados para conferência</h2>
+
+<ol type="1">
+	<li><p><b>Alterdata:</b> Férias/Relatórios de Férias/Conferência de Médias | Rescisão/Relatórios de Rescisão/Conferência de Médias RCT;</p>
+	<li><p><b>Dexion:</b> Relatórios/Dia a Dia/Relações/Relação de Médias Calculadas;</p>
+	<li><p><b>EBS:</b> Módulos/Férias/ Memória de Cálculo Individual | Módulos/13º Salário/ Memória de Cálculo Individual;</p>
+	<ol>
+		<li>
+				<div class="w3-panel w3-pale-red w3-border">
+					<span>&#9888; Caso haja no concorrente, alteração salarial retroativa os valores considerados para médias poderão ser diferentes dos apresentados na ficha financeira. <br>
+								Essa situação ocorre porque o EBS apresenta na ficha financeira o valor calculado antes do ajuste salarial, mas considera o valor corrigido para as médias.</span>
+			</div>	
+		</li>
+	</ol>
+	<li><p><b>Folhamatic:</b> Processos/13º Salário/Relatório de Médias | Processos/Férias/Cálculo de Férias/Cálculo de Médias -2;</p>
+	<li><p><b>Fortes:</b> Relatório/Obrigações Mensais/Calculo de Médias;</p>
+	<li><p><b>Intesys:</b> Fechamento Mensal/Médias de Variáveis - Analítico;</p>
+	<li><p><b>JB:</b> Saldos/Cálculo 13ª/Médias | Cálculo/Cálculos de férias individuais/Médias | Cálculos/Cálculo rescisório/Relatório 11 ;</p>
+	<li><p><b>Líder:</b> Relatórios/Relatório Rescisão/Relatório médias</p></li>
+	<li><p><b>Nasajon:</b> Funcionários/Listagens/Mensais/Médias de Rendimentos Variaveis e Horas Extras ;</p>
+	<li><p><b>Mastermaq:</b> Relatórios/Folhas de Pagamento/Demonstrativo de Calculo de Média;</p>
+	<li><p><b>Prosoft:</b> Social/Folha de pagamento/Manutenção de arquivos funcionais/Manutenção ficha financeira;</p>
+	<li><p><b>Questor:</b> Consulta/Médias;</p>
+	<li><p><b>SCI Visual:</b> Relatórios/Periodicos/Médias/Médias;</p>
+	<li><p><b>Siescon:</b> Relatórios/Colaboradores por Evento;</p>
+	<li><p><b>Tron:</b> Relatórios/Outros Relatórios Gerenciais/Relação de Médias;</p>
+	<li><p><b>Consisanet:</b> Relatórios/Resumos/Resumos da Folha/Resumos Folha Mensal;</p>
+	<li><p><b>Sibrax:</b> Relatórios/Fichas/Financeira;</p>
+	<li><p><b>Netspeed:</b> Relatórios/Folha de Pagamento/Ficha Financeira Anual/Funcionário;</p>
+</ol>
+
+<p>Qualquer dúvida ou problema, entre em contato com o departamento de suporte.</p>
+
+
+<div id='footerContent' style='margin:0px; padding:0px; position:fixed; left:0px; right:0px; bottom:-5px; overflow:fixed; z-index:10;'>
+	<table width='100%' border='0' cellspacing='0' cellpadding='0'>
+	<tr><td class='secondHeader'></td></tr>
+	<tr><td align='center' class='firstHeader'>Domínio Sistemas - 2022</td></tr>
+	</table>
+</div>
+<br>
+</body>
+</html>

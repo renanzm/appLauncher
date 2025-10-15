@@ -1,0 +1,6 @@
+GPSCS
+Código Empresa,0,0
+Código,23,3
+CBO,26,6
+Descrição da Função,32,20
+Nome do Cargo,132,50

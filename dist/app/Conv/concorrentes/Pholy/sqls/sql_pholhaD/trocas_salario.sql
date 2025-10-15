@@ -1,0 +1,8 @@
+SELECT CODEMP,
+       CODCAD,
+       ANOMES,
+       TIPSL1,
+       VALSL1,
+       IDENTI
+FROM PHCSAL
+ORDER BY 1, 2, 3

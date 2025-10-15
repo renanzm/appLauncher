@@ -1,0 +1,1 @@
+select * from public.empfolha order by 1, 2;

@@ -1,0 +1,14 @@
+convenioid,1,4,integer,0
+razaosocial,5,60,char,0
+endereco,61,53,char,0
+numero,115,10,char,0
+compl,125,25,char,0
+bairro,150,40,char,0
+cidade,190,40,char,0
+cep,230,9,char,0
+uf,239,2,char,0
+cnpj,241,20,char,0
+regans,261,30,char,0
+dddfone,291,2,char,0
+fone,293,10,char,0
+fax,317,20,char,0

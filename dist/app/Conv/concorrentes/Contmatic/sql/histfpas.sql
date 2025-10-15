@@ -1,0 +1,1 @@
+select * from public.histfpas order by 1, 2;

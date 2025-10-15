@@ -1,0 +1,12 @@
+funcid,1,4,integer,0
+#IDENTIFICAR,5,180,char,0
+seriectps,185,5,char,0
+ufctps,190,2,char,0
+catcnh,192,10,char,0
+venctocnh,202,4,date,0
+termcontr,206,4,date,0
+formacad,210,100,char,0
+alvara,310,2,integer,0
+numchapa,312,15,char,0
+funcaux1_int_1,327,2,integer,0
+funcaux1_chr_8,537,40,char,0

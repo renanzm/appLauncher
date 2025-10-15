@@ -1,0 +1,17 @@
+GPSJORNSEMANAL
+Código da Empresa,24,4
+Código da Jornada,28,4
+Tipo de Jornada - Segunda,32,1
+Horário da Jornada - Segunda,33,4
+Tipo de Jornada - Terça,37,1
+Horário da Jornada - Terça,38,4
+Tipo de Jornada - Quarta,42,1
+Horário da Jornada - Quarta,43,4
+Tipo de Jornada - Quinta,47,1
+Horário da Jornada - Quinta,48,4
+Tipo de Jornada - Sexta,52,1
+Horário da Jornada - Sexta,53,4
+Tipo de Jornada - Sabádo,57,1
+Horário da Jornada - Sabádo,58,4
+Tipo de Jornada - Domingo,62,1
+Horário da Jornada - Domingo,63,4

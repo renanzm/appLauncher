@@ -1,0 +1,3 @@
+nome, 2, 43, string
+estado, 43, 48, string
+ibge, 48, 52, int

@@ -1,0 +1,8 @@
+GPSHORARIO
+Código da Empresa,24,4
+Código do Horário,28,4
+Código do eSocial,32,30
+Descrição do Horário,62,40
+Entrada,102,5
+Saída,107,5
+Duração em Minutos,127,4

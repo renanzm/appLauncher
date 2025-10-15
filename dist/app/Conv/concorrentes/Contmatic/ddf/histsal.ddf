@@ -1,0 +1,10 @@
+tipoempregado,1,4,integer,0
+empid,5,4,integer,0
+datadissidio,9,4,date,0
+datareajuste,13,4,date,0
+tipo,17,4,integer,0
+horassemana,21,8,double,2
+horasmes,29,8,double,2
+valor,37,8,double,6
+aumentocomp,45,2,integer,0
+motivo,47,30,char,0

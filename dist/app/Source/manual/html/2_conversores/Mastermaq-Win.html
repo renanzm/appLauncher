@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Manual Conversores Novo Modelo</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../../css/w3.css">
+		<style>
+			body,h1,h2,h3,h4,h5 {font-family: "Verdana", sans-serif}
+			.w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
+			.w3-third img:hover{opacity: 1}
+		</style>
+		<style>
+			ol > li {
+			counter-increment: item;
+			}
+			ol > li:first-child {
+			counter-reset: item;
+			}
+			ol ol > li {
+			display: block;
+			}
+			ol ol > li:before {
+			content: counters(item, ".") ". ";
+			margin-left: -20px;
+			}
+		</style>
+	</head>
+	<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:50px">
+  <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+	<div class="w3-content" style="max-width:100%">
+		<h2 class="w3-center" id="INTRO"><b>Mastermaq-Win</b></h2>
+		<br>
+		<h4><b>Base de dados concorrente</b></h4>
+			<p>O backup do concorrente deve estar no formato ".BAK" (solicitar ao cliente um backup realizado no sistema MASTERMAQ-WIN).</p>
+		<h4><b>Programas necessários</b></h4>
+			<li>Microsoft Excel, versão 97/2003 ou superior</li>
+			<li>Acesso à Internet</li>
+			<li>Microsoft SQL Server 2019 + SQL Management Studio</li>
+			<li>Python 3.11 ou superior
+			<p>Com exceção do Microsoft Excel, todos os demais programas podem ser baixados no FTP:<br>/unidades/Pub/Conversores/[Conversor Thomson Reuters]/[Instaladores]</p>
+		<h4><b>Treinamento</b></h4>
+			<p>O treinamento está disponível no FTP:<br>/unidades/Pub/Conversores/[Conversor Thomson Reuters]/[ Treinamentos ]</p>
+		<h4><b>Conversão</b></h4>
+			<ol>				
+				<li>Acessar a pasta " Dados_Concorrente" na raiz do conversor;</li>
+				<li>Colar os arquivos de backup do Mastermaq nessa pasta (arquivos ".BAK");</li>
+				<li>Executar o arquivo "Conversao.bat" na pasta raiz;</li>
+				<li>Informe um número para controle do atendimento;</li>
+				<li>Na lista de conversores, informe a opção “Mastermaq-Win”, e pressione “Enter”;</li>
+				<li>Informe a opção “1 - Gerar planilha de empresas”;</li>
+				<li>Informe a opção “1” para exportar os dados (caso já tenha exportado, informe “2”);</li>
+				<li>Siga as instruções até que o processo seja finalizado;</li>
+				<li>Após isso, avaliar a seção “Verificador” deste manual.
+				<p><b>Oberservação: </b>Nesta versão do conversor, a restauração dos arquivos de banco de dados .BAK são realizadas automaticamente, bastando apenas não existir nenhum banco de dados já restaurado com o mesmo nome</p>
+				<div class="w3-panel w3-pale-red w3-border">
+					<span>&#9888; <b>MUITO IMPORTANTE:</b> As etapas para importação dos dados deste conversor mudaram, portanto, é de extrema importância que seja avaliado o tópico "IMPORTAÇÃO" no menu esquerdo deste manual.</span>
+				</div>
+			</ol>
+			<br>
+		<h4><b>Exclusão da base no SQL Server Management</b></h4>
+			<p>Após a conversão definitiva (entrega do banco ao cliente), você pode excluir a base no SQL Server Management para liberar espaço em sua máquina, seguindo os passos abaixo:</p>
+			<ol>
+				<li>Abrir o programa SQL Server Management;</li>
+				<li>Clicar no botão "Conectar";</li>
+				<li>Clicar com o botão direito do mouse na database desejada e selecionar “Excluir”;</li>
+				<li>Marcar as duas caixas de seleção conforme imagem abaixo;</li>
+				<li>Clicar no botão OK.</li>
+			</ol>
+			<div><img src="..\..\images\2_conversores\ebs_sqlserver_delete_database.png" class="w3-border w3-padding"></div>
+		<br>
+	</div>
+  </div>
+<!-- End page content -->
+</div>

@@ -1,0 +1,5 @@
+FOPTAB.CNAE.ARQ	61
+tipo1	1	1	int
+tipo2	2	1	int
+codigo	3	7	varchar
+nome	17	30	char

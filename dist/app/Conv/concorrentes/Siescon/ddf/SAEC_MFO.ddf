@@ -1,0 +1,5 @@
+col_codigo,1,4,integer,0
+mfo_data_inicial,6,8,char,0
+mfo_data_final,16,8,char,0
+tmf_tipo_movimento,30,6,char,0
+mfo_imp_homol_quit,72,30,char,0
