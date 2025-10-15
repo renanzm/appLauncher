@@ -1,2 +1,0 @@
-select EMPCODIGO,codi, desc, TIPO
-from JORNADATRABALHO

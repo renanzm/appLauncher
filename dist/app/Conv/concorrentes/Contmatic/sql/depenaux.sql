@@ -1,1 +1,0 @@
-select * from public.depenaux order by 1, 2;

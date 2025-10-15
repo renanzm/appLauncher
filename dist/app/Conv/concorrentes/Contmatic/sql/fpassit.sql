@@ -1,1 +1,0 @@
-select * from public.fpassit order by 1, 2;

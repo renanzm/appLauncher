@@ -1,1 +1,0 @@
-select * from public.autovig order by 1, 2;

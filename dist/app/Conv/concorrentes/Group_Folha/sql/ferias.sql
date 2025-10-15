@@ -1,2 +1,0 @@
-SELECT * FROM GF_Ferias
-ORDER BY 1,2,3

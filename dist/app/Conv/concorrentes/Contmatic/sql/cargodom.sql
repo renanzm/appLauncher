@@ -1,1 +1,0 @@
-select * from public.cargodom order by 1, 2;

@@ -1,1 +1,0 @@
-select * from public.localfol order by 1, 2;

@@ -1,1 +1,0 @@
-SELECT * FROM public.mfp_trabalhador_endereco

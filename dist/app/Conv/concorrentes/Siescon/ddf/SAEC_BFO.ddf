@@ -1,6 +1,0 @@
-bfo_codigo_banco,1,6,char,0
-bfo_nome,7,30,char,0
-bfo_nro_banco,37,2,integer,0
-bfo_nro_agencia,39,4,integer,0
-bfo_nome_agencia,43,30,char,0
-bfo_agencia_dv_1,102,1,char,0

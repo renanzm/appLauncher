@@ -1,6 +1,0 @@
-SELECT CODEMP,
-       CODCAD,
-       ANOMES,
-       CODSIN
-FROM PHCCAD2
-ORDER BY 1, 2, 3

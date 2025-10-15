@@ -1,1 +1,0 @@
-select * from public.fpaslnk order by 1, 2;

@@ -1,6 +1,0 @@
-SELECT EMP_CODIGO,
-       EST_CODIGO,
-       "DATA",
-       FAP
-FROM HES
-ORDER BY 1, 2, 3

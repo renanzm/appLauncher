@@ -1,1 +1,0 @@
-select * from public.valetra order by 1;

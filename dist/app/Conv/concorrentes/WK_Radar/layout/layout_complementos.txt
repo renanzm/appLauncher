@@ -1,7 +1,0 @@
-"[Empregado]";"[Data Admissão]"
-"Salario";"[Alteração]";"[Tipo Salário]";"[Reajuste]";"[Salário]";"[Histórico]";"[Tipo Reajuste]";"[Complemento Histórico]";"[Manter Piso]";"[Motivo]";"[Data Efeito]";"[Aplicar Arredondamento]"
-"Estabilidade";"[Tipo Estabilidade]";"[Data Início]";"[Data Término]"
-"Adicional";"[Adicional]";"[Tipo Valor]";"[Valor]";"[Início Período]";"[Final Período]";"[Início Vigência]";"[Histórico]";"[Complementos(s) Histórico]"
-"Dependente";"[Dependente]"
-"PensaoJudicial";"[Data Inicial]";"[Data Final]";"[Nome do Beneficiário]";"[DDD]";"[Telefone]";"[Tipo Logradouro]";"[Logradouro]";"[Número]";"[Complemento]";"[Bairro]";"[Município]";"[País]";"[Indicativo NIF]";"[Número NIF]";"[CEP]";"[Forma de Pagamento]";"[Código do Banco]";"[Código da Agência]";"[Dígito Agência]";"[Tipo Conta Bancária]";"[Número da Conta]";"[Dígito Conta]";"[Valor da Pensão]";"[Tipo do Valor da Pensão]";"[Valor Mínimo da Pensão]";"[Tipo do Valor Mínimo da Pensão]";"[Cálculo mínimo Sobre ]";"[Observações]";"[Número do Processo]";"[Vara Cível]";"[CPF]";"[Tipo Operação]";"[Cálculo Sobre ]";"[Tipos de Folha]";"[Desconto Integral]";"[Considerar Salário-família]";"[Considerar Base Integral]";"[Data Nascimento]"
-"ItensComposicao";"[Tipo de Folha]";"[Tipo Composição]";"[Tipo de Operação]";"[Rubrica]";"[Base]"

@@ -1,4 +1,0 @@
-CTBCUSTO
-Código Empresa,0,0
-Código do Centro de custos,23,5
-Denominação,28,30

@@ -1,5 +1,0 @@
-SELECT DISTINCT BANCO,
-                BANCO_AGENCIA
-           FROM P_TRABALHADORES
-          WHERE NOT BANCO IS NULL
-          ORDER BY 1

@@ -1,7 +1,0 @@
-SELECT MESBASE,
-       EMPCODIGO ||'-'|| SOCCODIGO as FUNCODIGO,
-       VLRPROLABORE
-  FROM SOCIOSPROLABORE
-  where EMPCODIGO is not null
-  
-order by 2,1

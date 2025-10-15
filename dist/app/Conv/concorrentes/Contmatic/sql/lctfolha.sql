@@ -1,1 +1,0 @@
-select * from public.lctfolha order by 1, 2;

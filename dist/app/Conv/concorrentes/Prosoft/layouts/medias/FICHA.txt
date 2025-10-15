@@ -1,5 +1,0 @@
-GPSTITFIN
-Código do título,26,3
-Tipo do título,2326,1
-Entra p Média de Férias,2426,1
-Entra p Média de 13 Salário,2526,1

@@ -1,5 +1,0 @@
-codigo_empregado, 2, 6, int
-data_alteracao, 6, 10, date
-descricao, 10, 61, string
-cbo, 61, 71, string
-indica_admissao, 99, 100, boolean

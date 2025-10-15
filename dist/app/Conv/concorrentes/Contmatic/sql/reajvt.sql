@@ -1,1 +1,0 @@
-select * from public.reajvt order by 1, 2;

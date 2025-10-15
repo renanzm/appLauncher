@@ -1,6 +1,0 @@
-GPSINTERVALO
-Código da Empresa,24,4
-Código do horário,28,4
-Início do Intervalo,33,5
-Fim do Intervalo,38,5
-Duração em Minutos,48,4

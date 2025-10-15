@@ -1,1 +1,0 @@
-select * from public.secao order by 1, 2;

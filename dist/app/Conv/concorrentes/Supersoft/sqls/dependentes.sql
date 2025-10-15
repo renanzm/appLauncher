@@ -1,4 +1,0 @@
-SELECT d.*,
-	   'empregado' AS TIPO_FUNC
-FROM DEPENDEN d
-ORDER BY 1, 2, 3

@@ -1,1 +1,0 @@
-select * from public.npcctb2 order by 1, 2;

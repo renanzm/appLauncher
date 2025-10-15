@@ -1,8 +1,0 @@
-emp_codigo,1,4,integer,0
-emp_estabelecimento,5,4,integer,0
-col_codigo,9,4,integer,0
-evento,13,6,char,0
-data_ref,24,8,char,0
-matricula,32,4,integer,0
-recibo,523,23,char,0
-info,600,2,char,0

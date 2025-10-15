@@ -1,5 +1,0 @@
-depenauxid,1,4,integer,0
-tipoempregado,5,4,integer,0
-codempregado,9,4,integer,0
-dependenteid,13,4,integer,0
-cpf,17,14,char,0

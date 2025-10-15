@@ -1,1 +1,0 @@
-select * from public.plcontag order by 1, 2;

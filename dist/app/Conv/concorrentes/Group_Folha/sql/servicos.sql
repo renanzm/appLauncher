@@ -1,2 +1,0 @@
-SELECT * FROM GF_Tomador
-ORDER BY 1,2

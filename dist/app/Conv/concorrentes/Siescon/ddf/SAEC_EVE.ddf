@@ -1,7 +1,0 @@
-eve_codigo,1,2,integer,0
-eve_descr_compl_usu,11,50,char,0
-eve_unidade_lcto,82,1,char,0
-eve_classificacao_13,119,1,char,0
-eve_classificacao_fe,120,1,char,0
-ocf_verba_deducao_te,192,10,char,0
-teste,192,10,char,0

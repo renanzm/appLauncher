@@ -1,4 +1,0 @@
-codigo_empregado, 2, 4, int
-codigo_rubrica, 7, 9, int
-referencia, 9, 17, decimal
-valor, 25, 33, decimal

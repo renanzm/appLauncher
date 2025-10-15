@@ -1,1 +1,0 @@
-select * from public.esocemp order by 1, 2;

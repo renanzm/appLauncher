@@ -1,1 +1,0 @@
-"[Codigo]";"[Nome]";"[Classificação]";"[Tipo Obra]";"[Telefone DDD]";"[Telefone Número]";"[Telefone Ramal]";"[Fax DDD]";"[Fax Número]";"[Fax Ramal]";"[Tipo do Logradouro]";"[Logradouro]";"[Número]";"[Complemento]";"[Bairro]";"[Município]";"[CEP]";"[Numero Inscrição]";"[Tipo inscrição]";"[Contato]";"[Contato E-mail]";"[E-mail]";"[Nascimento]"

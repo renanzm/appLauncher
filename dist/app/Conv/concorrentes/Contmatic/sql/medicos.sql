@@ -1,1 +1,0 @@
-select * from public.medicos order by 1, 2;

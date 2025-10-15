@@ -1,9 +1,0 @@
-GPSFUNC03
-Código da Empresa,23,4
-Código do Funcionário,27,5
-Data da Atualização,32,8
-Valor do Salário,40,18
-Função,58,20
-CBO01,78,6
-Motivo da Alteração,83,3
-CBO02,94,6

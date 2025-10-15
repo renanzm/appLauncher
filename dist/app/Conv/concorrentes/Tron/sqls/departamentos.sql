@@ -1,3 +1,0 @@
-SELECT *
-  FROM tbldep
-ORDER BY 1, 2

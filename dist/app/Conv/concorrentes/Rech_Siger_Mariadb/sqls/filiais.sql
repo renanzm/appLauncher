@@ -1,7 +1,0 @@
-SELECT YEMPRE.*,
-       PEMPRE.*
-FROM YEMPRE
-LEFT JOIN PEMPRE
-ON YEMPRE.yemp_sig = PEMPRE.pemp_sig
-AND YEMPRE.yemp_cfi = PEMPRE.pemp_cfi
-WHERE YEMPRE.yemp_cfi <> 0

@@ -1,5 +1,0 @@
-SELECT ABREV,
-       COD,
-       CUSTO
-FROM CENCUST
-ORDER BY 1, 2

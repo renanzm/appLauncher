@@ -1,1 +1,0 @@
-SELECT * FROM public.ger_centro_custo

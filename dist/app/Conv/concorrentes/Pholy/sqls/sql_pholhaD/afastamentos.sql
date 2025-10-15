@@ -1,9 +1,0 @@
-SELECT CODEMP,
-       CODCAD,
-       IDENTI,
-       DATINI,
-       DATFIN,
-       SFPAFA
-FROM PHCAFA
-WHERE DATINI != '00/00/0000'
-ORDER BY 1, 2, 4

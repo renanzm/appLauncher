@@ -1,3 +1,0 @@
-SELECT *
-FROM [Itens Filhos]
-ORDER BY 11,12

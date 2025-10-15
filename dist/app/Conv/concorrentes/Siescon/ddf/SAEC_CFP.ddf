@@ -1,5 +1,0 @@
-col_codigo,1,4,integer,0
-cfp_data_base,5,8,char,0
-eve_codigo,13,2,integer,0
-cfp_qtd_horas,19,8,double,2
-cfp_valor,27,8,double,2

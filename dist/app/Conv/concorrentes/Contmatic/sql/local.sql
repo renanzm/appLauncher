@@ -1,1 +1,0 @@
-select * from public.local order by 1, 2;

@@ -1,7 +1,0 @@
-col_codigo,1,4,integer,0
-var_codigo,5,5,char,0
-aco_data_alteracao,10,8,char,0
-aco_alterado_de,18,100,char,0
-aco_alterado_para,118,100,char,0
-aco_cod_motivo_alter,222,10,char,0
-sis_usuario,296,10,char,0

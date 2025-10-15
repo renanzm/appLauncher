@@ -1,4 +1,0 @@
-SELECT g.REGCAIXA,
-       g.REGCAIXAPROLAB,
-       g.DIAPGADT
-FROM DATABASE.gerenc AS g

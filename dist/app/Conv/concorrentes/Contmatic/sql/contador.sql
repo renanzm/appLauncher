@@ -1,1 +1,0 @@
-select * from public.contador order by 1, 2;

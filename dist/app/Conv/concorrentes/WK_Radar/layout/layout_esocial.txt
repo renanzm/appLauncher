@@ -1,1 +1,0 @@
-"Geração Evento";"Prazo Envio";"ID Evento";"Tipo Registro";"Desc. Tipo Registro";"Operação";"Desc. Registro";"Status Envio";"Recibo"

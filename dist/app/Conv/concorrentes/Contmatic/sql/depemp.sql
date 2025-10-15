@@ -1,1 +1,0 @@
-select * from public.depemp order by 1, 2;

@@ -1,1 +1,0 @@
-select * from public.depfun order by 1, 2;

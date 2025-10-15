@@ -1,1 +1,0 @@
-SELECT '{codi_emp}' AS CODI_EMP, * FROM SR3{empresa} WHERE R3_PD = '000'

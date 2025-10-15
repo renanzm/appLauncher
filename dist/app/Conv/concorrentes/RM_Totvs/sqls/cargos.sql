@@ -1,7 +1,0 @@
-SELECT CODCOLIGADA,
-       ID,
-       NOME,
-       CBO,
-       CBO2002
-FROM [dbo].PFUNCAO
-ORDER BY 1,2

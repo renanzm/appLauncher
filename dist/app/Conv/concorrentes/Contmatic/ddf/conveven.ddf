@@ -1,7 +1,0 @@
-convevenid,1,4,integer,0
-tipoempregado,5,4,integer,0
-empregadoid,9,4,integer,0
-dependenteid,13,4,integer,0
-convenioid,17,4,integer,0
-eventoid,21,4,integer,0
-tipoplano,25,4,integer,0

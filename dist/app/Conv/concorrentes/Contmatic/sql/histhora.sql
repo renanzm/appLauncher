@@ -1,1 +1,0 @@
-select * from public.histhora order by 1, 2;

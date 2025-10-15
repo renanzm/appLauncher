@@ -1,7 +1,0 @@
-SELECT out_emp.*,
-       mun.NOMEMUNIC,
-	   mun.CODIGORAIS
-  FROM OUTRAEMPRESA out_emp
-  LEFT JOIN MUNICIPIO mun
-    ON mun.CODIGOMUNIC = out_emp.CODIGOMUNIC
-   AND mun.SIGLAESTADO = out_emp.SIGLAESTADO

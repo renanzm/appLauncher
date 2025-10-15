@@ -1,1 +1,0 @@
-SELECT * FROM p_trabalhadores_lot_jor ORDER BY 1,2,3

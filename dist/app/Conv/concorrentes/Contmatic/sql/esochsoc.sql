@@ -1,1 +1,0 @@
-select * from public.esochsoc order by 1, 2;

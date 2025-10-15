@@ -1,9 +1,0 @@
-SELECT ABREV,
-       CODFUNC AS CODIGO,
-       REAJUSTE,
-       SALANT,
-       SALATU,
-       MOTIVO,
-       'empregado' AS TIPO_FUNC
-FROM CARTEIRA
-ORDER BY 1, 2, 3

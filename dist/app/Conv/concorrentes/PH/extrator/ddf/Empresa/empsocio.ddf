@@ -1,6 +1,0 @@
-codigo_socio, 6, 8, int
-nome, 8, 49, string
-cpf, 49, 66, string
-data_entrada, 66, 70, date
-data_saida, 70, 74, date
-participacao, 74, 78, float

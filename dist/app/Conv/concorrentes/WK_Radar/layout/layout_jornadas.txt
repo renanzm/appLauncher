@@ -1,2 +1,0 @@
-"[Código]";"[Descrição]";"[Turno]";"[Horas Mês]";"[Horas Semana]";"[Horas DSR]";"[Data Início Turma A]";"[Data Início Turma B]";"[Data Início Turma C]";"[Data Início Turma D]";"[Data Início Turma E]";"[Data Início Turma F]";"[Data Início Turma G]";"[Data Início Turma H]";"[Data Início Turma I]";"[Data Início Turma J]";"[Divisor 210 Horas]";"[Tipo]";"[Possui Horário Noturno]"
-"Horarios";"[Horário]";"[Tipo Horário Sistema]"

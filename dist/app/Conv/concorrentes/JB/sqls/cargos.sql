@@ -1,3 +1,0 @@
-SELECT *
-FROM CARGOS
-order by 2,3,1

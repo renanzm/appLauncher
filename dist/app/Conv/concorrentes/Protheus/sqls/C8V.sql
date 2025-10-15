@@ -1,1 +1,0 @@
-SELECT '{codi_emp}' AS CODI_EMP, * FROM C8V{empresa}

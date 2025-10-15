@@ -1,7 +1,0 @@
-SELECT CODFUNC,
-       SEQUENCIA,
-       INICIO,
-       CODSIND
-  FROM DATABASE.histsind
- ORDER BY CODFUNC,
-          INICIO;

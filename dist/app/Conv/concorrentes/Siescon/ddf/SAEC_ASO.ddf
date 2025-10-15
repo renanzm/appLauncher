@@ -1,7 +1,0 @@
-col_codigo,1,4,integer,0
-data,5,8,char,0
-tipo,13,2,integer,0
-resultado,15,2,char,0
-medico_nome,17,80,char,0
-medico_crm,97,8,char,0
-medico_telefone,107,15,char,0

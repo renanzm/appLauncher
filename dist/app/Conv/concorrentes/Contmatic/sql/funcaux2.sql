@@ -1,1 +1,0 @@
-select * from public.funcaux2 order by 1, 2;

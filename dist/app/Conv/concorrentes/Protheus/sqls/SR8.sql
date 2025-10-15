@@ -1,1 +1,0 @@
-SELECT '{codi_emp}' AS CODI_EMP, * FROM SR8{empresa} WHERE R8_TIPOAFA NOT IN ('001', '002')

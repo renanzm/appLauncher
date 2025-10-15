@@ -1,3 +1,0 @@
-SELECT *
-FROM PAFAST
-WHERE pafa_taf  != 'F'

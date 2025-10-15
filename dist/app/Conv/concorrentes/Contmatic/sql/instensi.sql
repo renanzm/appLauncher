@@ -1,1 +1,0 @@
-select * from public.instensi order by 1, 2;

@@ -1,6 +1,0 @@
-codigo, 2, 4, int
-classificacao, 4, 20, string
-nome, 20, 61, string
-tipo, 61, 62, int
-local, 62, 82, string
-tomador_servicos, 108, 110, int

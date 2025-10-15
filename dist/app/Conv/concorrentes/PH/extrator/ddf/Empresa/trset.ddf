@@ -1,4 +1,0 @@
-codigo_empregado, 2, 6, int
-data, 10, 14, date
-codigo_setor, 14, 16, int
-admissao, 20, 22, int

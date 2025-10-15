@@ -1,4 +1,0 @@
-PRGAGENCIA
-Número da Agência,26,8
-Praça,74,30
-Dígito Verificador Código Agência,325,1

@@ -1,1 +1,0 @@
-select * from public.respemph order by 1, 2;

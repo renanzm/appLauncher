@@ -1,2 +1,0 @@
-SELECT * FROM [GF_Afastamento]
-ORDER BY 1,2,3

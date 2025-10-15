@@ -1,3 +1,0 @@
-SELECT *
-FROM TBLFERIAS
-order by 1,2,3

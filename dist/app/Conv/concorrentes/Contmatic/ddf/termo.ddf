@@ -1,7 +1,0 @@
-termoid,1,4,integer,0
-apelidoemp,5,8,char,0
-tipoinscricao,13,2,integer,0
-nrocartorio,15,2,integer,0
-comarca,17,35,char,0
-nroinscricao,52,20,char,0
-dataregistro,72,4,date,0

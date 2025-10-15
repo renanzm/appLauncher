@@ -1,9 +1,0 @@
-SELECT ABREV,
-       CODIGO AS CODIGO,
-       ANO || '-' || MES || '-01' AS REAJUSTE,
-       SALANT,
-       SALATU,
-       'ALTERACAO SALARIAL SOCIO' AS MOTIVO,
-       'contribuinte' AS TIPO_FUNC
-FROM CARTSOC
-ORDER BY 1, 2, 3

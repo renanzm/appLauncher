@@ -1,2 +1,0 @@
-"[Código]";"[Início]";"[Descrição]";"[Dia Base]";"[Tipo Horário]";"[Tolerância Máxima Extras/Faltas (Fixo)]";"[Tolerância Máxima Extras/Faltas (Flexível)]";"[Tolerância Extras Entrada/Saída (Móvel)]";"[Tolerância Faltas Entrada/Saída (Móvel)]";"[Tolerância Extras Alimentação (Móvel)]";"[Tolerância Faltas Alimentação (Móvel)]"
-"Turnos";"Entrada";"Antes Entrada";"Após Entrada";"Pré-assinalada Entrada";"Saída";"Antes Saída";"Após Saída";"Pré-assinalada Saída"

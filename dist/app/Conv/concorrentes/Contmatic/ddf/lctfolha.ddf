@@ -1,7 +1,0 @@
-func,1,4,integer,0
-codevento,5,4,integer,0
-ano,15,2,integer,0
-mes,17,2,integer,0
-referencia,19,8,double,2
-proventos,27,8,double,4
-teste,27,8,double,4
